@@ -1,0 +1,34 @@
+.footer-cta {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.footer-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: inherit;
+  /* Inherit color from the parent theme */
+}
+
+.footer-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: inherit;
+  /* Inherit color from the parent theme */
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-color);
+  /* Use secondary color for hover */
+  color: var(--text-color);
+  /* Ensure text color remains visible on hover */
+}

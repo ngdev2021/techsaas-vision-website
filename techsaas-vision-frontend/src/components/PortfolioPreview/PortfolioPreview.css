@@ -1,0 +1,50 @@
+.portfolio-preview {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.portfolio-preview h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.portfolio-preview p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Mafia Theme */
+.portfolio-preview.mafia {
+  background-color: #2c2c2c;
+  color: #fff;
+}
+
+/* Drug Game Theme */
+.portfolio-preview.drug-game {
+  background-color: #1f1f1f;
+  color: #f5f5f5;
+}
+
+/* Adult Entertainment Theme */
+.portfolio-preview.adult-entertainment {
+  background-color: #660033;
+  color: #fff;
+}
+
+/* Monopoly Theme */
+.portfolio-preview.monopoly {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+/* Foodie Influencer Theme */
+.portfolio-preview.foodie-influencer {
+  background-color: #ffe5b4;
+  color: #333;
+}
+
+/* Social Media Influencer Theme */
+.portfolio-preview.social-media-influencer {
+  background-color: #e1f7d5;
+  color: #333;
+}

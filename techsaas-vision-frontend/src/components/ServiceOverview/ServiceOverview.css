@@ -1,0 +1,88 @@
+.service-overview {
+  padding: 60px 40px;
+  /* Increased padding for more breathing space */
+  background-color: #f4f4f4;
+  /* Add a subtle background color */
+  text-align: center;
+}
+
+.service-overview-title {
+  font-size: 3rem;
+  /* Increase title size */
+  color: #333;
+  /* Darker title color for better contrast */
+  margin-bottom: 40px;
+  /* Increase spacing below title */
+  letter-spacing: 1px;
+  /* Add letter spacing for a polished look */
+  text-transform: uppercase;
+  /* Uppercase for a more modern feel */
+}
+
+/* Ensure service columns are full-screen width */
+.service-columns {
+  display: flex;
+  flex-wrap: wrap;
+  /* Wraps cards into multiple rows if needed */
+  gap: 30px;
+  /* Increase the gap between cards */
+  justify-content: center;
+  /* Center the cards within the container */
+}
+
+.service-column {
+  flex: 1 1 calc(33.333% - 30px);
+  /* Flex layout for three columns */
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  /* Ensure cards are the same height */
+}
+
+.service-card {
+  width: 100%;
+  max-width: 350px;
+  /* Control the max width of each card */
+  padding: 20px;
+  /* Add padding inside the card */
+  background-color: #fff;
+  /* White background for cards */
+  border-radius: 15px;
+  /* Rounded corners for cards */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  /* More pronounced shadow on hover */
+}
+
+/* Make the layout responsive */
+@media (max-width: 1024px) {
+  .service-column {
+    flex: 1 1 calc(50% - 30px);
+    /* Two columns layout on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .service-overview-title {
+    font-size: 2.5rem;
+    /* Slightly reduce title size on smaller screens */
+  }
+
+  .service-column {
+    flex: 1 1 100%;
+    /* Single column layout on mobile devices */
+  }
+
+  .service-card {
+    width: 90%;
+    /* Make the card smaller on smaller screens */
+    margin: 0 auto;
+    /* Center the card on mobile devices */
+  }
+}

@@ -1,0 +1,64 @@
+.cta-button {
+  padding: 18px 40px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+  letter-spacing: 1px;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button:active {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 102, 0, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cta-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Theme-Specific Styles */
+.cta-button.mafia {
+  background-image: linear-gradient(to right, #8b0000, #4b0000);
+}
+
+.cta-button.drug-game {
+  background-image: linear-gradient(to right, #1e90ff, #00008b);
+}
+
+.cta-button.adult-entertainment {
+  background-image: linear-gradient(to right, #ff1493, #ff69b4);
+}
+
+.cta-button.monopoly {
+  background-image: linear-gradient(to right, #000, #4b0082);
+}
+
+.cta-button.foodie-influencer {
+  background-image: linear-gradient(to right, #ff6347, #ff4500);
+}
+
+.cta-button.social-media-influencer {
+  background-image: linear-gradient(to right, #1e90ff, #00ced1);
+}

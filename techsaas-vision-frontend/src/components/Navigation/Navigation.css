@@ -1,0 +1,107 @@
+/* General Styles */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ img {
+  width: 100px;
+  height: 100px;
+  border: none  ;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.nav-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  font-size: 1rem;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+/* Theme Switcher Button */
+.theme-switcher-button {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-switcher-button:hover {
+  background-color: var(--accent-hover-color);
+}
+
+/* Dark Mode Button */
+.dark-mode-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.dark-mode-button svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--text-color);
+}
+
+/* Light Mode */
+.navigation.light {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --accent-color: #0066cc;
+  --accent-hover-color: #004f99;
+}
+
+/* Dark Mode */
+.navigation.dark {
+  --background-color: #1e1e1e;
+  --text-color: #ffffff;
+  --accent-color: #ff5722;
+  --accent-hover-color: #e64a19;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-logo {
+    margin-bottom: 10px;
+  }
+}

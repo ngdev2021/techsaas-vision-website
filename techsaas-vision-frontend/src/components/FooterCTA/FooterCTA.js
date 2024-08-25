@@ -1,22 +1,34 @@
-import React from 'react';
-import CTAButton from '../CTAButton/CTAButton';
-import { useThemeSettings } from '../../context/ThemeSettingsContext';
 import './FooterCTA.css';
+import SignupFormModal from '../SignupFormModal/SignupFormModal';
+import { useThemeSettings } from '../../context/theme/ThemeSettingsContext/ThemeSettingsContext';
+import { useState } from 'react';
 
 const FooterCTA = () => {
   const themeSettings = useThemeSettings();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleModalOpen = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <div
       className="footer-cta"
       style={{
-        backgroundColor: themeSettings.colors.background, // Use theme's background color
-        color: themeSettings.colors.text, // Use theme's text color
+        backgroundColor: themeSettings.colors.accent,
+        color: themeSettings.colors.textOnAccent,
       }}
     >
       <h2>Ready to get started?</h2>
-      <p>Contact us today to take your business to the next level.</p>
-      <CTAButton text="Contact Us" />
+      <p>Sign up today to take your business to the next level.</p>
+      <button className="cta-button" onClick={handleModalOpen}>
+        Get Started
+      </button>
+      {isModalOpen && <SignupFormModal onClose={handleModalClose} />}
     </div>
   );
 };

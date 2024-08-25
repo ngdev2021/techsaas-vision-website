@@ -1,0 +1,79 @@
+.contact-page {
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Ensure content is above the background */
+}
+
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-textarea {
+  height: 150px;
+  resize: none;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-5px);
+}
+
+.cta-button:active {
+  transform: translateY(2px);
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    padding: 20px;
+  }
+
+  .contact-input,
+  .contact-textarea {
+    padding: 12px;
+  }
+
+  .cta-button {
+    padding: 12px 20px;
+  }
+}

@@ -1,23 +1,22 @@
 import React from 'react';
 import './Button.css';
-import { useThemeSettings } from '../../context/ThemeSettingsContext';
+import '../../testStyles.css'; // Import the test styles here
 
-const Button = ({ children, onClick }) => {
-  const themeSettings = useThemeSettings();
-
+const Button = ({
+  label,
+  onClick,
+  style,
+  disabled = false,
+  className = 'test-button', // Add the test className here
+}) => {
   return (
     <button
-      className="custom-button"
-      style={{
-        backgroundColor: themeSettings.colors.primary,
-        color: themeSettings.colors.text,
-        borderRadius: themeSettings.layout.borderRadius,
-        padding: themeSettings.layout.spacing,
-        fontFamily: themeSettings.typography.fontFamily,
-      }}
+      className={`button ${className}`} // Add the test className here
       onClick={onClick}
+      disabled={disabled}
+      style={style}
     >
-      {children}
+      {label}
     </button>
   );
 };

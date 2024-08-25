@@ -1,4 +1,3 @@
-import React from 'react';
 import './HoverOverlay.css';
 
 const HoverOverlay = () => {

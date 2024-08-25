@@ -1,0 +1,104 @@
+.mystery-box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  perspective: 1000px;
+}
+
+.mystery-box {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(30deg);
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.mystery-box:hover {
+  transform: rotateX(-20deg) rotateY(20deg);
+}
+
+.box-side {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  /* Set the box color to red */
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.front {
+  transform: translateZ(100px);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+  background-color: #ff4d4d;
+  /* Lighter red for the lid */
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3);
+  /* Add shadow to the lid */
+  border-top: 10px solid #d10000;
+  /* Add a border to create a 3D effect */
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.lid {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background-color: #ff4d4d;
+  /* Match lid color with the top */
+  top: -20px;
+  transform-origin: center bottom;
+  animation: openLid 2s ease forwards;
+  visibility: hidden;
+}
+
+@keyframes openLid {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  100% {
+    transform: rotateX(-90deg);
+    visibility: visible;
+  }
+}
+
+.ribbon,
+.ribbon-cross {
+  position: absolute;
+  background-color: #d10000;
+  /* Darker red for ribbon */
+}
+
+.ribbon {
+  width: 20%;
+  height: 100%;
+  left: 40%;
+}
+
+.ribbon-cross {
+  width: 100%;
+  height: 20%;
+  top: 40%;
+}

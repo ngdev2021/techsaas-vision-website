@@ -1,4 +1,3 @@
-import React from 'react';
 import './PortfolioPreview.css';
 
 const PortfolioPreview = () => {

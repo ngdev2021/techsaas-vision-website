@@ -1,0 +1,19 @@
+.tooltip {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: let(--tooltip-background-color);
+  color: let(--tooltip-text-color);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+th:hover .tooltip {
+  opacity: 1;
+}

@@ -1,0 +1,104 @@
+/* SignupFormModal.css */
+
+.signup-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  /* Ensure the modal is on top */
+}
+
+.signup-modal-content {
+  background-color: let(--background-color);
+  color: let(--text-color);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.signup-modal-content h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Updated input and select styling */
+.signup-modal-content input,
+.signup-modal-content select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  outline: let(--accent-color);
+  background-color: let(--secondaryBackground);
+  /* Use a contrasting background */
+  border: 3px solid let(--accent-color);
+  /* More prominent border */
+  border-radius: 6px;
+  /* Slightly rounded corners */
+  color: let(--text-color);
+  /* Ensure text is visible */
+  font-size: 1rem;
+  /* Increase font size for readability */
+}
+
+.signup-modal-content input:focus,
+.signup-modal-content select:focus {
+  border-color: let(--secondary-color);
+  /* Change border color on focus */
+  outline: none;
+  /* Remove the default outline */
+  box-shadow: 0 0 5px let(--accent-color);
+  /* Add a subtle shadow on focus */
+}
+
+.signup-modal-content .submit-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  /* Slightly rounded corners */
+  font-size: 1.1rem;
+  /* Increase font size for prominence */
+  cursor: pointer;
+  background-color: let(--accent-color);
+  color: let(--textOnAccent);
+  /* Ensure text color contrasts well */
+  transition: background-color 0.3s ease;
+}
+
+.signup-modal-content .submit-button:hover {
+  background-color: let(--secondary-color);
+  /* Change background color on hover */
+}
+
+.signup-modal-content .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

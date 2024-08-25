@@ -1,4 +1,3 @@
-import React from 'react';
 import './ThemeSelectionModal.css';
 
 const ThemeSelectionModal = ({ setTheme }) => {

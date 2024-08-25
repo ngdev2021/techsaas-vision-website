@@ -1,29 +1,58 @@
-/* General Styles */
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --accent-color: #0066cc;
+  --accent-hover-color: #004f99;
+  --text-color-on-accent: #ffffff;
+}
+
+.dark-theme {
+  --background-color: #1e1e1e;
+  --text-color: #ffffff;
+  --accent-color: #ff5722;
+  --accent-hover-color: #e64a19;
+  --text-color-on-accent: #000000;
+}
+
 .navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 15px 30px;
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
- img {
-  width: 100px;
-  height: 100px;
-  border: none  ;
-  border-radius: 50%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-
-
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .nav-logo a {
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: inherit;
   text-decoration: none;
+  color: inherit;
+}
+
+.nav-logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 .nav-links {
@@ -37,71 +66,114 @@
 }
 
 .nav-links a {
+  text-decoration: none;
   font-size: 1rem;
   color: inherit;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  padding: 10px 15px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: var(--accent-color);
-}
-
-/* Theme Switcher Button */
-.theme-switcher-button {
   background-color: var(--accent-color);
-  color: #fff;
-  padding: 10px 15px;
-  border: none;
+  color: var(--text-color-on-accent);
   border-radius: 5px;
+}
+
+.nav-toggle {
+  display: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
 }
 
-.theme-switcher-button:hover {
-  background-color: var(--accent-hover-color);
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background-color: var(--text-color);
+  height: 3px;
+  width: 30px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
-/* Dark Mode Button */
+.hamburger::before {
+  transform: translateY(-8px);
+}
+
+.hamburger::after {
+  transform: translateY(8px);
+}
+
+.nav-toggle.active .hamburger {
+  background-color: transparent;
+}
+
+.nav-toggle.active .hamburger::before {
+  transform: rotate(45deg) translateY(0);
+}
+
+.nav-toggle.active .hamburger::after {
+  transform: rotate(-45deg) translateY(0);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+
+.theme-switcher-button,
 .dark-mode-button {
   background: none;
   border: none;
   cursor: pointer;
   padding: 5px;
+  margin-left: 20px;
   display: flex;
   align-items: center;
 }
 
-.dark-mode-button svg {
+.dark-mode-button svg,
+.theme-switcher-button svg {
   width: 24px;
   height: 24px;
   fill: var(--text-color);
 }
 
-/* Light Mode */
-.navigation.light {
-  --background-color: #ffffff;
-  --text-color: #333333;
-  --accent-color: #0066cc;
-  --accent-hover-color: #004f99;
+.theme-switcher-button {
+  background-color: var(--accent-color);
+  color: var(--text-color-on-accent);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Dark Mode */
-.navigation.dark {
-  --background-color: #1e1e1e;
-  --text-color: #ffffff;
-  --accent-color: #ff5722;
-  --accent-hover-color: #e64a19;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .nav-logo {
-    margin-bottom: 10px;
-  }
+.theme-switcher-button:hover {
+  background-color: var(--accent-hover-color);
+  color: var(--text-color-on-accent);
 }

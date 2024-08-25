@@ -1,47 +1,63 @@
 import React from 'react';
 import './HeroSection.css';
-import { useThemeSettings } from '../../context/ThemeSettingsContext';
-import videoFile from '../../assets/videos/logovideo.mp4'; // Import the video file
+import { useThemeSettings } from '../../context/theme/ThemeSettingsContext/ThemeSettingsContext';
+import CTAButton from '../CTAButton/CTAButton';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = ({
   title,
-  description,
+  subtitle,
+  backgroundVideo,
   align = 'center',
-  buttons = [],
+  overlayOpacity = 0.5,
+  buttonText = 'Enter',
+  buttonAction = '/home',
+  additionalContent = null, // Allows injecting additional content like images, badges, etc.
 }) => {
   const themeSettings = useThemeSettings();
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate(buttonAction);
+  };
 
   return (
     <section
       className={`hero-section ${align}`}
       style={{
-        backgroundColor: themeSettings.colors.background,
         color: themeSettings.colors.text,
         fontFamily: themeSettings.typography.fontFamily,
       }}
     >
-      {/* Video Background */}
-      <video className="background-video" autoPlay loop muted>
-        <source src={videoFile} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      {/* Hero Content */}
+      {backgroundVideo && (
+        <video
+          className="background-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src={backgroundVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      )}
+      <div
+        className="hero-overlay"
+        style={{
+          backgroundColor: `rgba(0, 0, 0, ${overlayOpacity})`,
+        }}
+      ></div>
       <div className="hero-content">
         <h1>{title}</h1>
-        <p>{description}</p>
+        <p>{subtitle}</p>
         <div className="hero-buttons">
-          {buttons.map((button, index) => (
-            <a
-              key={index}
-              href={button.href}
-              className="hero-button"
-              style={{ backgroundColor: themeSettings.colors.accent }}
-            >
-              {button.label}
-            </a>
-          ))}
+          <CTAButton text={buttonText} onClick={handleButtonClick} />
         </div>
+        {additionalContent && (
+          <div className="additional-content">
+            {additionalContent}
+          </div>
+        )}
       </div>
     </section>
   );

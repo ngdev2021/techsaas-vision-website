@@ -1,0 +1,210 @@
+/* Base styles for large screens */
+
+/* Landing Page should take up the available height between navigation and footer */
+.landing-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Video Background */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Overlay to control background opacity */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--footer-height));
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Content styling */
+.content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  background-color: transparent;
+  z-index: 2;
+}
+
+/* Keep the text fully opaque and above the background */
+.hero-section h1,
+.hero-section p,
+.cta-button {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+}
+
+/* CTA Button Styles */
+.cta-button {
+  background-color: var(--accent-color);
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-5px);
+}
+
+/* Responsive adjustments for small and medium screens */
+@media (max-width: 1200px) {
+
+  /* Adjust the layout and elements for medium screens */
+  .hero-section h1 {
+    font-size: 3.5rem;
+  }
+
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 992px) {
+
+  /* Further adjustments for smaller screens */
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+
+  .hero-section p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Small screens */
+  .hero-section {
+    padding: 60px 20px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1.4rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  /* Disconnect Overlay from Footer on Small Screens */
+  .landing-page .overlay {
+    height: calc(100% - var(--footer-height));
+  }
+}
+
+@media (max-width: 583px) {
+
+  /* Extra small screens */
+  .hero-section {
+    padding: 50px 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .cta-button {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Footer CTA Section */
+.footer-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  text-align: center;
+  transition: padding 0.3s ease;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-cta {
+    flex-direction: column;
+    padding: 10px;
+    font-size: 1rem;
+    height: auto;
+  }
+
+  .footer-cta h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 583px) {
+  .footer-cta {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .footer-cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    padding: 8px 0;
+  }
+}

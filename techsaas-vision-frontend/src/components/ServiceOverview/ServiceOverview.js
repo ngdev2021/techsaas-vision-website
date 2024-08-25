@@ -1,7 +1,6 @@
-import React from 'react';
-import ServiceCard from '../ServiceCard/ServiceCard';
-import { useThemeSettings } from '../../context/ThemeSettingsContext';
+import ServiceCard from '../cards/ServiceCard/ServiceCard';
 import './ServiceOverview.css';
+import { useThemeSettings } from '../../context/theme/ThemeSettingsContext/ThemeSettingsContext';
 
 const ServiceOverview = () => {
   const { content } = useThemeSettings();

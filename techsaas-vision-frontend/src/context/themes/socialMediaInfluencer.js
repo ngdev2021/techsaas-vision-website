@@ -1,3 +1,4 @@
+// import svg icons using ReactComponent as and assign them to variables from ../../assets/icons/icon-name-icon.svg
 import { ReactComponent as PersonalBrandIcon } from '../../assets/icons/personal-brand-icon.svg';
 import { ReactComponent as ContentCreationIcon } from '../../assets/icons/content-creation-icon.svg';
 import { ReactComponent as EngagementIcon } from '../../assets/icons/engagement-icon.svg';

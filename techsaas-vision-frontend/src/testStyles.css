@@ -1,0 +1,23 @@
+/* TestStyles.css */
+
+/* Increase specificity for button styles */
+button.test-button {
+  background-color: #ff6347 !important; /* Tomato color for testing */
+  color: #ffffff !important; /* White text for testing */
+  border: 2px solid #ff4500 !important; /* Orange border for testing */
+}
+
+.comparison-chart.test-chart {
+  background-color: #282c34 !important; /* Dark background for testing */
+  color: #61dafb !important; /* Light blue text for testing */
+  border: 2px solid #20232a !important; /* Darker border for testing */
+}
+
+.comparison-chart.test-chart th,
+.comparison-chart.test-chart td {
+  color: #61dafb !important; /* Light blue text for testing */
+}
+
+.comparison-chart.test-chart h3 {
+  color: #61dafb !important; /* Light blue text for testing */
+}

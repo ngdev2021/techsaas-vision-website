@@ -1,0 +1,23 @@
+.crypto-prices-widget {
+  padding: 20px;
+  background-color: let(--background-color);
+  color: let(--text-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.crypto-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.crypto-item {
+  padding: 10px;
+  background-color: let(--secondary-background-color);
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+}

@@ -1,0 +1,56 @@
+.service-card {
+  background-color: var(--background-color);
+  color: var(--text-color); /* Ensures the text color is themed */
+  border: 1px solid var(--accent-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ribbon-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--accent-color);
+  color: var(--badge-text-color); /* Themed badge text color */
+  padding: 5px 0;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px 8px 0 0;
+}
+
+.icon-container {
+  margin-bottom: 15px;
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  color: var(--primary-color); /* Themed icon color */
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.details-list {
+  margin-top: 15px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.details-list li {
+  margin-bottom: 10px;
+  color: var(--text-color); /* Ensure list items are also themed */
+}

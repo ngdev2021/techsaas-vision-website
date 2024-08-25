@@ -1,0 +1,138 @@
+.api-widgets {
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+.api-widgets h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.location-selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.city-dropdown,
+.zip-input {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  width: 45%;
+}
+
+.zip-input {
+  width: 40%;
+}
+
+.fetch-button {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.fetch-button:hover {
+  transform: translateY(-5px);
+}
+
+.loading-spinner {
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #ff6600;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1.2s linear infinite;
+  margin: 30px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.weather-info {
+  margin-top: 30px;
+  color: #fff;
+}
+
+.current-weather {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.forecast {
+  margin-top: 40px;
+}
+
+.forecast-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.forecast-card {
+  flex: 1;
+  min-width: 120px;
+  max-width: 150px;
+  text-align: center;
+}
+
+.error {
+  color: #ff0000;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sunny-day-background {
+  background: linear-gradient(to right, #f6d365, #fda085);
+}
+
+.cloudy-day-background {
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+.rainy-day-background {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+.default-day-background {
+  background: linear-gradient(to right, #89f7fe, #66a6ff);
+}
+
+.clear-night-background {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+.cloudy-night-background {
+  background: linear-gradient(to right, #3a6073, #16222a);
+}
+
+.rainy-night-background {
+  background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+}
+
+.default-night-background {
+  background: linear-gradient(to right, #141e30, #243b55);
+}

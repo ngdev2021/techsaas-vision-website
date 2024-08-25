@@ -1,0 +1,43 @@
+:root {
+  --button-background-color: #007bff;
+  --button-text-color: #ffffff;
+  --button-border-color: #0056b3;
+}
+
+body.dark-mode {
+  --button-background-color: #555555;
+  --button-text-color: #f1f1f1;
+  --button-border-color: #777777;
+}
+
+/* Base styles for the test component */
+.test-component {
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles for the test component */
+.test-component.dark-mode {
+  background-color: #282c34 !important; /* Dark background */
+  color: #f1f1f1 !important; /* Light text */
+}
+
+/* Base styles for the test button */
+.test-button {
+  background-color: #ff6347 !important; /* Tomato background */
+  color: #ffffff !important; /* White text */
+  border: 2px solid #ff4500 !important; /* Orange border */
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles for the test button */
+.test-button.dark-mode {
+  background-color: #555555 !important; /* Dark mode button background */
+  color: #f1f1f1 !important; /* Light text */
+  border-color: #777777 !important; /* Darker border */
+}

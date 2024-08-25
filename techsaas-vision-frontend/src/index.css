@@ -3,6 +3,16 @@ html {
   /* Smooth scrolling for internal links */
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
 
 
 
@@ -19,7 +29,7 @@ h1 {
   font-size: clamp(1.5rem, 5vw, 2.5rem);
   /* Dynamic sizing */
 }
-:root {
+/* :root {
   --background-color: #ffffff;
   --text-color: #000000;
 }
@@ -32,26 +42,70 @@ h1 {
 .light-mode {
   --background-color: #ffffff;
   --text-color: #000000;
+} */
+
+
+/* Light Theme */
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --heading-color: #111111;
+  --hero-background-color: #f0f0f0;
+  --hero-text-color: #222222;
+  --button-background-color: #007bff;
+  --button-text-color: #ffffff;
+  --button-hover-background-color: #0056b3;
+  --accent-color: #007bff;
+  --secondary-color: #6c757d;
+  --card-background-color: #f8f9fa;
 }
 
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
+/* Dark Theme */
+[data-theme="dark"] {
+  --background-color: #181818;
+  --text-color: #f0f0f0;
+  --heading-color: #e0e0e0;
+  --hero-background-color: #121212;
+  --hero-text-color: #e0e0e0;
+  --button-background-color: #1a73e8;
+  --button-text-color: #ffffff;
+  --button-hover-background-color: #1659c1;
+  --accent-color: #1a73e8;
+  --secondary-color: #3c4043;
+  --card-background-color: #242424;
 }
 
-.hero-section {
-  background-color: var(--background-color);
-  color: var(--text-color);
+:root {
+  --button-background-color: #007bff; /* Default button background */
+  --button-text-color: #ffffff; /* Default button text color */
+  --button-hover-background-color: #0056b3; /* Hover state background */
+  --button-hover-text-color: #ffffff; /* Hover state text color */
+  --button-active-background-color: #004085; /* Active state background */
+  --button-active-text-color: #ffffff; /* Active state text color */
+  --button-disabled-background-color: #cccccc; /* Disabled state background */
+  --button-disabled-text-color: #666666; /* Disabled state text color */
+
+  /* Dark mode settings */
+  --dark-button-background-color: #333333;
+  --dark-button-text-color: #f1f1f1;
+  --dark-button-hover-background-color: #555555;
+  --dark-button-hover-text-color: #f1f1f1;
+  --dark-button-active-background-color: #444444;
+  --dark-button-active-text-color: #f1f1f1;
+  --dark-button-disabled-background-color: #555555;
+  --dark-button-disabled-text-color: #888888;
 }
 
-.service-overview {
-  background-color: var(--background-color);
-  color: var(--text-color);
+body.dark-mode {
+  --button-background-color: var(--dark-button-background-color);
+  --button-text-color: var(--dark-button-text-color);
+  --button-hover-background-color: var(--dark-button-hover-background-color);
+  --button-hover-text-color: var(--dark-button-hover-text-color);
+  --button-active-background-color: var(--dark-button-active-background-color);
+  --button-active-text-color: var(--dark-button-active-text-color);
+  --button-disabled-background-color: var(--dark-button-disabled-background-color);
+  --button-disabled-text-color: var(--dark-button-disabled-text-color);
 }
 
-/* Add more components as needed */
-
-/* Add more components as needed */
 
 

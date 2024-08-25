@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from 'react';
+// src/components/Testimonials/Testimonials.jsx
+
+import React, { useEffect, useState } from 'react';
+import TestimonialCard from '../cards/TestimonialCard/TestimonialCard';
 import './Testimonials.css';
 
 const Testimonials = ({ testimonials = [] }) => {
@@ -17,21 +20,20 @@ const Testimonials = ({ testimonials = [] }) => {
     return <p>No testimonials available at the moment.</p>;
   }
 
-  const { text, author, avatar } = testimonials[currentIndex];
+  const { text, author, avatar, title, rating } =
+    testimonials[currentIndex];
 
   return (
-    <div className="testimonials">
-      <h2>What Our Clients Say</h2>
-      <div className="testimonial-card">
-        {avatar && (
-          <img
-            src={avatar}
-            alt={author}
-            className="testimonial-avatar"
-          />
-        )}
-        <p className="testimonial-text">"{text}"</p>
-        <p className="testimonial-author">- {author}</p>
+    <div className="testimonials-container">
+      <h2 className="testimonials-heading">What Our Clients Say</h2>
+      <div className="testimonial-card-wrapper">
+        <TestimonialCard
+          title={title}
+          text={text}
+          author={author}
+          avatar={avatar}
+          rating={rating}
+        />
       </div>
       <div className="testimonial-navigation">
         {testimonials.map((_, index) => (

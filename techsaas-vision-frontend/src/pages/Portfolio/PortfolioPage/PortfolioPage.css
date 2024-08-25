@@ -1,0 +1,77 @@
+.portfolio-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: let(--accent-color);
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: let(--accent-color);
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+.section-title,
+h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: let(--text-color);
+  position: relative;
+}
+
+.featured-projects-section,
+.skills-showcase-section,
+.api-widgets-section,
+.real-estate-finder-section,
+.calculator-widget-section,
+.nearby-finder-section,
+.crypto-prices-section,
+.contact-banner-section {
+  padding: 60px 0;
+  background-color: let(--secondary-background-color);
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  color: let(--accent-color);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .portfolio-page {
+    padding: 10px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .featured-projects-section,
+  .skills-showcase-section,
+  .api-widgets-section,
+  .real-estate-finder-section,
+  .calculator-widget-section,
+  .nearby-finder-section,
+  .crypto-prices-section,
+  .contact-banner-section {
+    padding: 30px 0;
+  }
+}

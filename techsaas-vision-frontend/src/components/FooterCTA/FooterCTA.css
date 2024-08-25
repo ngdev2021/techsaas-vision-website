@@ -1,20 +1,30 @@
 .footer-cta {
-  padding: 60px 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--secondary-color);
+  padding: 20px;
   text-align: center;
+  transition: padding 0.3s ease;
+  z-index: 1000;
 }
 
+/* Footer Text */
 .footer-cta h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: inherit;
-  /* Inherit color from the parent theme */
 }
 
 .footer-cta p {
   font-size: 1.2rem;
   margin-bottom: 20px;
   color: inherit;
-  /* Inherit color from the parent theme */
 }
 
 .cta-button {
@@ -28,7 +38,71 @@
 
 .cta-button:hover {
   background-color: var(--secondary-color);
-  /* Use secondary color for hover */
   color: var(--text-color);
-  /* Ensure text color remains visible on hover */
+}
+
+/* Responsive Footer */
+@media (max-width: 1024px) {
+  .footer-cta {
+    flex-direction: column;
+    padding: 15px;
+    height: auto;
+  }
+
+  .footer-cta h2 {
+    font-size: 2rem;
+  }
+
+  .footer-cta p {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-cta {
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+  }
+
+  .footer-cta h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer-cta p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-cta {
+    padding: 8px;
+    height: auto;
+  }
+
+  .footer-cta h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .footer-cta p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+
+  .cta-button {
+    width: 100%;
+    padding: 8px 0;
+    font-size: 1rem;
+  }
 }

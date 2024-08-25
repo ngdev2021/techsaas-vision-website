@@ -1,10 +1,10 @@
-import defaultTheme from './defaultTheme';
-import monopolyTheme from './monopoly';
-import foodieTheme from './foodie';
-import mafiaTheme from './mafia';
-import drugGameTheme from './drugGame';
 import adultEntertainmentTheme from './adultEntertainment';
+import defaultTheme from './defaultTheme';
+import drugGameTheme from './drugGame';
+import foodieTheme from './foodie';
 import foodieInfluencerTheme from './foodieInfluencer';
+import mafiaTheme from './mafia';
+import monopolyTheme from './monopoly';
 import socialMediaInfluencerTheme from './socialMediaInfluencer';
 
 export const themeSettings = {

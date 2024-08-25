@@ -11,9 +11,9 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
+  color: #fff;
 }
 
-/* Video Background */
 .background-video {
   position: absolute;
   top: 0;
@@ -21,113 +21,113 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.3;
   z-index: 0;
   pointer-events: none;
 }
 
-/* Add a subtle overlay for better readability */
-.hero-section::before {
-  content: '';
+.hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Increased opacity for a richer effect */
   z-index: 1;
   pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .hero-content {
   z-index: 2;
   position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .hero-section h1 {
-  font-size: 4.5rem;
-  /* Larger size for more impact */
-  font-weight: 700;
-  /* Bold weight for premium feel */
+  font-size: 4rem;
+  font-weight: 600;
   margin-bottom: 20px;
-  color: var(--accent-color);
-  /* Solid color from theme for better contrast */
   text-transform: uppercase;
-  /* Premium touch */
-  letter-spacing: 2px;
-  /* Adds spacing for a polished look */
+  letter-spacing: 1.5px;
+  line-height: 1.3;
   animation: fadeInDown 1s ease-out;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hero-section p {
   font-size: 1.6rem;
-  /* Slightly larger for readability */
   font-weight: 300;
-  /* Light weight for contrast */
   line-height: 1.8;
   margin-bottom: 30px;
-  color: var(--text-color);
-  /* Dynamically uses theme text color */
   animation: fadeInUp 1s ease-out;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.additional-content {
+  margin-top: 20px;
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 1200px) {
+  .hero-section h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 992px) {
   .hero-section h1 {
     font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 50px 20px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+    white-space: normal;
+    line-height: 1.2;
   }
 
   .hero-section p {
     font-size: 1.4rem;
   }
+
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
 }
 
-/* Button Styles */
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 30px 10px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+
+  .cta-button {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
 }
 
-.hero-button {
-  padding: 15px 30px;
-  font-size: 1.2rem;
-  /* Slightly larger for premium feel */
-  color: #fff;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 50px;
-  background-color: var(--accent-color);
-  /* Dynamically uses theme accent color */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  /* Adds depth */
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.hero-button:hover {
-  background-color: var(--secondary-color);
-  /* Secondary color on hover */
-  transform: translateY(-5px);
-  /* Subtle lift effect */
-}
-
-/* Alignment options */
-.hero-section.center {
-  text-align: center;
-}
-
-.hero-section.left {
-  text-align: left;
-  padding-left: 40px;
-}
-
-.hero-section.right {
-  text-align: right;
-  padding-right: 40px;
-}
-
-/* Keyframes for animations */
 @keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -150,45 +150,4 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Custom theme styles */
-
-/* Mafia Theme */
-.hero-section.mafia {
-  background-color: #2c2c2c;
-  color: #fff;
-  /* Ensures visibility against dark background */
-}
-
-/* Drug Game Theme */
-.hero-section.drug-game {
-  background-color: #1f1f1f;
-  color: #fff;
-  /* Ensures visibility against dark background */
-}
-
-/* Adult Entertainment Theme */
-.hero-section.adult-entertainment {
-  background-color: #660033;
-  color: #fff;
-  /* Ensures visibility against dark background */
-}
-
-/* Monopoly Theme */
-.hero-section.monopoly {
-  background-color: #f2f2f2;
-  color: #000;
-}
-
-/* Foodie Influencer Theme */
-.hero-section.foodie-influencer {
-  background-color: #ffe5b4;
-  color: #333;
-}
-
-/* Social Media Influencer Theme */
-.hero-section.social-media-influencer {
-  background-color: #e1f7d5;
-  color: #333;
 }

@@ -1,0 +1,92 @@
+.contact-banner {
+  padding: 60px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-banner:hover {
+  transform: translateY(-10px);
+}
+
+.contact-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.contact-text {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.contact-icon {
+  width: 80px;
+  height: 80px;
+  fill: var(--icon-color);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--light-text-color);
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: var(--light-text-color);
+}
+
+.cta-button {
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: 2px solid var(--button-border-color);
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-banner {
+    padding: 40px 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}

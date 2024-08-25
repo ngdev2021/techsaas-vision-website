@@ -1,0 +1,47 @@
+/* src/components/CustomSection/Section.css */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin-bottom: 60px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--section-background-color);
+    /* Use CSS variable */
+    color: var(--text-color);
+    /* Ensure text color changes */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.section p {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: color 0.3s ease;
+}
+
+.section .cta-button {
+  padding: 15px 50px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.section .cta-button:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.3);
+}

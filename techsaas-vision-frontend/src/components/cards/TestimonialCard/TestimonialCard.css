@@ -1,0 +1,70 @@
+.testimonial-card {
+  /* background-color: var(--card-background-color) ; */
+  /* Ensure this variable is set in dark mode */
+  /* color: var(--text-color) ; */
+  /* Ensure text color changes */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  /* Darker shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  padding: 40px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.6);
+  /* Darker shadow */
+}
+
+.testimonial-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border: 5px solid var(--accent-color);
+  /* Accent color */
+}
+
+.testimonial-text {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: var(--text-color) !important;
+  /* Ensure testimonial text color changes */
+}
+
+.testimonial-author {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-color) !important;
+  /* Ensure heading color changes */
+}
+
+.testimonial-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--heading-color) ;
+  /* Ensure title color changes */
+}
+
+.testimonial-rating {
+  font-size: 1.4rem;
+  color: var(--accent-color);
+  /* Accent color */
+  margin-top: 10px;
+}
+
+/* Make sure your CSS variables are defined and updated in dark mode */
+/* For example, in your dark mode CSS: */
+[data-theme="dark"] {
+  --card-background-color: #242424;
+  --text-color: #f0f0f0;
+  --heading-color: #e0e0e0;
+  --accent-color: #1a73e8;
+}

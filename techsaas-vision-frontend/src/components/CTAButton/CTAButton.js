@@ -1,19 +1,9 @@
 import React from 'react';
-import { useThemeSettings } from '../../context/ThemeSettingsContext';
-import './CTAButton.css';
+import './CTAButton.css'; // Import styles
 
-const CTAButton = ({ text, className = '', onClick }) => {
-  const themeSettings = useThemeSettings();
-
+const CTAButton = ({ text, onClick, className = '' }) => {
   return (
-    <button
-      className={`cta-button ${className}`}
-      onClick={onClick}
-      style={{
-        backgroundColor: themeSettings.colors.accent, // Use theme's accent color
-        color: themeSettings.colors.text, // Use theme's text color
-      }}
-    >
+    <button className={`cta-button ${className}`} onClick={onClick}>
       {text}
     </button>
   );

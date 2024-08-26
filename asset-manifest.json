@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/techsaas-vision-website/static/css/main.7fdc7bd4.css",
-    "main.js": "/techsaas-vision-website/static/js/main.ca15f83e.js",
+    "main.js": "/techsaas-vision-website/static/js/main.227deedc.js",
     "static/js/453.67ac3930.chunk.js": "/techsaas-vision-website/static/js/453.67ac3930.chunk.js",
     "static/media/logovideo.mp4": "/techsaas-vision-website/static/media/logovideo.f0ca45477dd79fe27b62.mp4",
     "static/media/techsaas-logo2.png": "/techsaas-vision-website/static/media/techsaas-logo2.2cf435f7d872e1592def.png",
@@ -57,11 +57,11 @@
     "static/media/digital-transformation-icon.svg": "/techsaas-vision-website/static/media/digital-transformation-icon.eeab98bf33e93e314afeff3b2b25fefc.svg",
     "static/media/entertainment-icon.svg": "/techsaas-vision-website/static/media/entertainment-icon.5942cd5327336e65fa45da9d15c30579.svg",
     "main.7fdc7bd4.css.map": "/techsaas-vision-website/static/css/main.7fdc7bd4.css.map",
-    "main.ca15f83e.js.map": "/techsaas-vision-website/static/js/main.ca15f83e.js.map",
+    "main.227deedc.js.map": "/techsaas-vision-website/static/js/main.227deedc.js.map",
     "453.67ac3930.chunk.js.map": "/techsaas-vision-website/static/js/453.67ac3930.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7fdc7bd4.css",
-    "static/js/main.ca15f83e.js"
+    "static/js/main.227deedc.js"
   ]
 }

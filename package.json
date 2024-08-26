@@ -1,10 +1,11 @@
-{"type": "module",
+{
+  "type": "module",
   "devDependencies": {
     "jest": "^29.7.0"
   },
   "name": "techsaas-vision",
   "version": "1.0.0",
-  "main": "techsaas-cli.js",
+  "main": "techsaas-vision-backend/server.js",
   "dependencies": {
     "ansi-escapes": "^4.3.2",
     "ansi-regex": "^5.0.1",
@@ -35,6 +36,7 @@
     "color-convert": "^2.0.1",
     "color-name": "^1.1.4",
     "concat-map": "^0.0.1",
+    "concurrently": "^8.2.2",
     "convert-source-map": "^2.0.0",
     "create-jest": "^29.7.0",
     "cross-spawn": "^7.0.3",
@@ -132,6 +134,7 @@
     "natural-compare": "^1.4.0",
     "node-int64": "^0.4.0",
     "node-releases": "^2.0.18",
+    "nodemon": "^3.1.4",
     "normalize-path": "^3.0.0",
     "npm-run-path": "^4.0.1",
     "once": "^1.4.0",
@@ -196,9 +199,12 @@
     "yocto-queue": "^0.1.0"
   },
   "scripts": {
-    "npm run test": "jest",
-    "start": "node techsaas-cli.js",
-    "test": "jest"
+    "test": "jest",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon techsaas-vision-backend/server.js",
+    "client": "npm start --prefix techsaas-vision-frontend",
+    "build": "npm run build --prefix techsaas-vision-frontend"
+
   },
   "author": "Reginald Brown <ngdev21@gmail.com> (https://www.reginaldbrowninc.com/)",
   "license": "ISC",

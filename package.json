@@ -6,6 +6,8 @@
   "name": "techsaas-vision",
   "version": "1.0.0",
   "main": "techsaas-vision-backend/server.js",
+  "homepage": "https://ngdev2021.github.io/techsaas-vision-website",
+
   "dependencies": {
     "ansi-escapes": "^4.3.2",
     "ansi-regex": "^5.0.1",
@@ -203,8 +205,8 @@
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon techsaas-vision-backend/server.js",
     "client": "npm start --prefix techsaas-vision-frontend",
-    "build": "npm run build --prefix techsaas-vision-frontend"
-
+    "build": "npm run build --prefix techsaas-vision-frontend",
+    "deploy": "npm run deploy --prefix techsaas-vision-frontend"
   },
   "author": "Reginald Brown <ngdev21@gmail.com> (https://www.reginaldbrowninc.com/)",
   "license": "ISC",

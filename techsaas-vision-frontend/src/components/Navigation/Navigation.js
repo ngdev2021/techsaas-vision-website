@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Navigation.css';
 import logo from '../../assets/techsaas-logo.webp';
 import { ReactComponent as DarkModeIcon } from '../../assets/icons/dark-mode-icon.svg';
@@ -34,10 +35,10 @@ const Navigation = ({ toggleModal, userName }) => {
     <nav className={`navigation ${isDarkMode ? 'dark' : 'light'}`}>
       <div className="nav-container">
         <div className="nav-logo">
-          <a href="/">
+          <Link to="/">
             <img src={logo} alt="TechSaas Vision" />
             TechSaas Vision
-          </a>
+          </Link>
         </div>
         <button
           className={`nav-toggle ${menuActive ? 'active' : ''}`}
@@ -50,16 +51,16 @@ const Navigation = ({ toggleModal, userName }) => {
             <span>Welcome, {userName ? userName : 'Guest'}!</span>
           </li>
           <li>
-            <a href="/services">Services</a>
+            <Link to="/services">Services</Link>
           </li>
           <li>
-            <a href="/portfolio">Portfolio</a>
+            <Link to="/portfolio">Portfolio</Link>
           </li>
           <li>
-            <a href="/about">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
           <li>
             <button

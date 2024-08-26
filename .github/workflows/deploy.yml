@@ -3,32 +3,27 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger on push to the 'main' branch
+      - main
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout code (use the latest version)
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3  # Updated to the latest version
 
-      # Step 2: Set up Node.js environment (use the latest version)
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v3  # Updated to the latest version
         with:
-          node-version: '20'  # Use Node.js 20
+          node-version: '20'
 
-      # Step 3: Install frontend dependencies
       - name: Install frontend dependencies
         run: npm install --prefix techsaas-vision-frontend
 
-      # Step 4: Build frontend project
       - name: Build frontend
         run: npm run build --prefix techsaas-vision-frontend
 
-      # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

@@ -1,0 +1,31 @@
+# Node.js dependencies
+node_modules/
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Cache and build files
+.cache/
+dist/
+build/
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Ignore large files in .cache
+techsaas-vision-frontend/node_modules/.cache/
+
+# Ignore specific large files
+techsaas-vision-frontend/node_modules/.cache/default-development/15.pack
+techsaas-vision-frontend/node_modules/.cache/default-development/26.pack
+
+# Ignore IDE-specific files
+.idea/
+.vscode/

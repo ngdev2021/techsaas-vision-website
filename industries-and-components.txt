@@ -1,0 +1,1369 @@
+1. Industry
+1.1. Software Development
+
+1.1.1. Enterprise Software
+
+1.1.1.1. ERP (Enterprise Resource Planning)
+1.1.1.1.1. Inventory Management
+1.1.1.1.1.1. Frontend Components
+Product Listings (e.g., tables, filters, pagination)
+1.1.1.1.1.2. Backend Components
+InventoryController (e.g., CRUD operations, search)
+InventoryService (e.g., business logic)
+1.1.1.1.1.3. Database Components
+InventorySchema (e.g., product name, SKU, quantity)
+Migrations (e.g., schema changes)
+1.1.1.1.2. Accounting
+1.1.1.1.2.1. Frontend Components
+Financial Reports (e.g., charts, tables)
+1.1.1.1.2.2. Backend Components
+AccountingService (e.g., ledger entries, reconciliations)
+PaymentProcessor (e.g., invoice generation)
+1.1.1.1.2.3. Database Components
+TransactionSchema (e.g., debit, credit)
+Seeders (e.g., initial data)
+1.1.1.1.3. HR Management
+1.1.1.1.3.1. Frontend Components
+Employee Management (e.g., forms, tables)
+1.1.1.1.3.2. Backend Components
+HRController (e.g., employee data management)
+PayrollService (e.g., salary calculations)
+1.1.1.1.3.3. Database Components
+EmployeeSchema (e.g., name, position, salary)
+Constraints (e.g., unique email)
+1.1.2. Mobile Applications
+
+1.1.2.1. Native Mobile Apps
+
+1.1.2.1.1. Frontend Components
+Mobile UI (e.g., buttons, list views, navigation)
+1.1.2.1.2. Backend Components
+API Gateway (e.g., REST API)
+Push Notification Service
+1.1.2.1.3. Database Components
+UserPreferencesSchema (e.g., theme, notifications)
+Indexes (e.g., userId index)
+1.1.2.2. Hybrid Mobile Apps
+
+1.1.2.2.1. Frontend Components
+Web View (e.g., HTML, CSS, JS within mobile)
+Shared Components (e.g., common UI elements)
+1.1.2.2.2. Backend Components
+AuthMiddleware (e.g., OAuth)
+LoggingService (e.g., error tracking)
+1.1.2.2.3. Database Components
+SyncManager (e.g., offline data sync)
+Data Encryption (e.g., secure storage)
+1.1.3. Desktop Applications
+
+1.1.3.1. Electron Apps
+1.1.3.1.1. Frontend Components
+MainWindow (e.g., app layout)
+Menu Bar (e.g., file, edit, view)
+1.1.3.1.2. Backend Components
+FileSystemAccess (e.g., local file handling)
+Notifications (e.g., system alerts)
+1.1.3.1.3. Database Components
+LocalStorage (e.g., user settings)
+Cache (e.g., session data)
+1.1.4. Cloud-Based Software
+
+1.1.4.1. SaaS
+1.1.4.1.1. Frontend Components
+Subscription Management UI (e.g., billing plans)
+User Onboarding (e.g., step-by-step guides)
+1.1.4.1.2. Backend Components
+Multi-Tenant Manager (e.g., tenant isolation)
+API Rate Limiter
+1.1.4.1.3. Database Components
+TenantSchema (e.g., tenant ID, data partitioning)
+Migrations (e.g., tenant-specific schema updates)
+1.1.5. AI/ML-Based Software
+
+1.1.5.1. Predictive Analytics
+1.1.5.1.1. Frontend Components
+Data Visualization (e.g., charts, heatmaps)
+1.1.5.1.2. Backend Components
+ModelTrainingService (e.g., ML model training)
+AI API (e.g., predictions)
+1.1.5.1.3. Database Components
+TrainingDataSchema (e.g., features, labels)
+Data Normalization (e.g., preprocessing steps)
+1.2. Web Development
+
+1.2.1. Web Applications
+
+1.2.1.1. Single Page Applications (SPAs)
+
+1.2.1.1.1. Frontend Components
+Router (e.g., page navigation)
+State Management (e.g., Redux, Context API)
+1.2.1.1.2. Backend Components
+API Gateway (e.g., data fetching)
+AuthMiddleware (e.g., session handling)
+1.2.1.1.3. Database Components
+UserSessionSchema (e.g., tokens, expiration)
+Cache (e.g., session data)
+1.2.1.2. Progressive Web Apps (PWAs)
+
+1.2.1.2.1. Frontend Components
+Service Workers (e.g., offline support)
+Push Notifications (e.g., Web Push)
+1.2.1.2.2. Backend Components
+SyncManager (e.g., data synchronization)
+API Endpoint (e.g., REST, GraphQL)
+1.2.1.2.3. Database Components
+IndexedDB (e.g., local storage)
+Data Encryption (e.g., securing local data)
+1.2.2. Websites
+
+1.2.2.1. Static Websites
+
+1.2.2.1.1. Frontend Components
+HTML/CSS Templates (e.g., pages, sections)
+Interactive Elements (e.g., forms, buttons)
+1.2.2.1.2. Backend Components
+Content Delivery Network (CDN) integration
+1.2.2.1.3. Database Components
+No Database (static content only)
+1.2.2.2. CMS (Content Management System)
+
+1.2.2.2.1. Frontend Components
+WYSIWYG Editor (e.g., rich text editor)
+Media Library (e.g., image/video upload)
+1.2.2.2.2. Backend Components
+ContentManager (e.g., content CRUD operations)
+PermissionsService (e.g., role-based access)
+1.2.2.2.3. Database Components
+ContentSchema (e.g., title, body, metadata)
+Triggers (e.g., auto-save, versioning)
+2. Type of Application
+2.1. Enterprise Application
+
+2.1.1. ERP (Enterprise Resource Planning)
+
+2.1.1.1. Inventory Management
+See section 1.1.1.1.1
+2.1.1.2. Accounting
+See section 1.1.1.1.2
+2.1.1.3. HR Management
+See section 1.1.1.1.3
+2.1.2. CRM (Customer Relationship Management)
+
+2.1.2.1. Lead Management
+
+2.1.2.1.1. Frontend Components
+Lead Form (e.g., data entry form)
+Lead Dashboard (e.g., lists, filters)
+2.1.2.1.2. Backend Components
+LeadProcessor (e.g., lead qualification)
+EmailNotification (e.g., automated emails)
+2.1.2.1.3. Database Components
+LeadSchema (e.g., name, contact info)
+DataValidation (e.g., phone/email validation)
+2.1.2.2. Sales Pipeline
+
+2.1.2.2.1. Frontend Components
+Sales Funnel (e.g., drag-and-drop stages)
+Pipeline Reports (e.g., charts, graphs)
+2.1.2.2.2. Backend Components
+PipelineManager (e.g., deal progression)
+ReportGenerator (e.g., export to PDF/Excel)
+2.1.2.2.3. Database Components
+PipelineSchema (e.g., deal stage, value)
+Relationships (e.g., lead to deal mapping)
+2.1.2.3. Customer Support
+
+2.1.2.3.1. Frontend Components
+Support Ticket Form (e.g., issue reporting)
+Knowledge Base (e.g., FAQ section)
+2.1.2.3.2. Backend Components
+TicketProcessor (e.g., issue assignment)
+NotificationService (e.g., email, SMS)
+2.1.2.3.3. Database Components
+TicketSchema (e.g., issue, priority, status)
+Auditing (e.g., tracking changes)
+2.1.3. SCM (Supply Chain Management)
+
+2.1.3.1. Supplier Management
+
+2.1.3.1.1. Frontend Components
+Supplier Dashboard (e.g., supplier list, filters)
+Supplier Details (e.g., supplier profile page)
+2.1.3.1.2. Backend Components
+SupplierService (e.g., supplier CRUD)
+NotificationService (e.g., email, SMS)
+2.1.3.1.3. Database Components
+SupplierSchema (e.g., name, products, contracts)
+Constraints (e.g., unique supplier ID)
+2.1.3.2. Logistics Tracking
+
+2.1.3.2.1. Frontend Components
+Logistics Dashboard (e.g., maps, tracking)
+Status Updates (e.g., real-time updates)
+2.1.3.2.2. Backend Components
+TrackingService (e.g., GPS data processing)
+NotificationService (e.g., status alerts)
+2.1.3.2.3. Database Components
+LogisticsSchema (e.g., tracking number, status)
+Indexes (e.g., optimize queries)
+2.1.3.3. Order Fulfillment
+
+2.1.3.3.1. Frontend Components
+Order Status (e.g., order history, tracking)
+2.1.3.3.2. Backend Components
+OrderProcessor (e.g., fulfillment logic)
+PaymentGateway (e.g., payment processing)
+2.1.3.3.3. Database Components
+OrderSchema (e.g., product, quantity, status)
+Relationships (e.g., order-product mapping)
+2.2. E-commerce Application
+
+2.2.1. B2C (Business-to-Consumer)
+
+2.2.1.1. Product Catalog
+
+2.2.1.1.1. Frontend Components
+ProductGrid (e.g., product listings)
+ProductFilters (e.g., category, price)
+2.2.1.1.2. Backend Components
+CatalogService (e.g., product data management)
+SearchService (e.g., product search engine)
+2.2.1.1.3. Database Components
+ProductSchema (e.g., name, price, description)
+Indexes (e.g., optimize search queries)
+2.2.1.2. Checkout Process
+
+2.2.1.2.1. Frontend Components
+CheckoutForm (e.g., billing, shipping)
+PaymentOptions (e.g., credit card, PayPal)
+2.2.1.2.2. Backend Components
+CheckoutService (e.g., order processing)
+PaymentGateway (e.g., payment handling)
+2.2.1.2.3. Database Components
+OrderSchema (e.g., order ID, items, totals)
+Relationships (e.g., order-product mapping)
+2.2.1.3. Customer Reviews
+
+2.2.1.3.1. Frontend Components
+ReviewForm (e.g., rating, comments)
+ReviewList (e.g., customer feedback)
+2.2.1.3.2. Backend Components
+ReviewService (e.g., moderation, approval)
+2.2.1.3.3. Database Components
+ReviewSchema (e.g., rating, comments)
+Constraints (e.g., one review per user per product)
+2.2.2. B2B (Business-to-Business)
+
+2.2.2.1. Bulk Ordering
+
+2.2.2.1.1. Frontend Components
+BulkOrderForm (e.g., multiple product selection)
+BulkPricingCalculator (e.g., dynamic pricing)
+2.2.2.1.2. Backend Components
+OrderProcessor (e.g., handling large orders)
+DiscountService (e.g., bulk discount logic)
+2.2.2.1.3. Database Components
+OrderSchema (e.g., items, quantities, totals)
+Relationships (e.g., order-product mapping)
+2.2.2.2. Purchase Orders
+
+2.2.2.2.1. Frontend Components
+PurchaseOrderForm (e.g., supplier details, items)
+2.2.2.2.2. Backend Components
+POService (e.g., creating and managing POs)
+2.2.2.2.3. Database Components
+POSchema (e.g., supplier, items, totals)
+Relationships (e.g., PO-supplier mapping)
+2.2.2.3. Business Account Management
+
+2.2.2.3.1. Frontend Components
+AccountDashboard (e.g., business overview)
+UserRoles (e.g., role-based access control)
+2.2.2.3.2. Backend Components
+AccountService (e.g., user management)
+2.2.2.3.3. Database Components
+AccountSchema (e.g., business name, users)
+Constraints (e.g., unique account ID)
+2.3. Social Media Application
+
+2.3.1. User Feed
+
+2.3.1.1. Frontend Components
+FeedLayout (e.g., post listings)
+PostCard (e.g., individual post display)
+2.3.1.2. Backend Components
+FeedService (e.g., post retrieval, sorting)
+NotificationService (e.g., post interactions)
+2.3.1.3. Database Components
+PostSchema (e.g., content, user, timestamp)
+Indexes (e.g., optimize feed loading)
+2.3.2. Messaging
+
+2.3.2.1. Frontend Components
+ChatWindow (e.g., message display, input)
+ContactList (e.g., user list, status)
+2.3.2.2. Backend Components
+MessagingService (e.g., message storage, delivery)
+WebSocketService (e.g., real-time communication)
+2.3.2.3. Database Components
+MessageSchema (e.g., sender, recipient, content)
+Relationships (e.g., user-message mapping)
+2.3.3. Notifications
+
+2.3.3.1. Frontend Components
+NotificationBell (e.g., unread count)
+NotificationDropdown (e.g., recent notifications)
+2.3.3.2. Backend Components
+NotificationService (e.g., create, read notifications)
+PushService (e.g., push notifications)
+2.3.3.3. Database Components
+NotificationSchema (e.g., type, status)
+Indexes (e.g., optimize retrieval)
+2.4. Educational Platform
+
+2.4.1. Course Management
+
+2.4.1.1. Frontend Components
+CourseCatalog (e.g., course listings)
+CourseDetails (e.g., course syllabus)
+2.4.1.2. Backend Components
+CourseService (e.g., course creation, management)
+EnrollmentService (e.g., student enrollments)
+2.4.1.3. Database Components
+CourseSchema (e.g., title, description, schedule)
+Relationships (e.g., course-instructor mapping)
+2.4.2. Quiz and Assessment
+
+2.4.2.1. Frontend Components
+QuizForm (e.g., question display, answer input)
+ResultsPage (e.g., score, feedback)
+2.4.2.2. Backend Components
+QuizService (e.g., grading, feedback)
+ResultsProcessor (e.g., score calculations)
+2.4.2.3. Database Components
+QuizSchema (e.g., questions, answers, scores)
+Constraints (e.g., unique student attempts)
+2.4.3. Student Dashboard
+
+2.4.3.1. Frontend Components
+DashboardLayout (e.g., student profile, courses)
+ProgressTracker (e.g., course progress)
+2.4.3.2. Backend Components
+StudentService (e.g., profile management)
+NotificationService (e.g., course reminders)
+2.4.3.3. Database Components
+StudentSchema (e.g., name, enrolled courses)
+Relationships (e.g., student-course mapping)
+2.5. Healthcare Application
+
+2.5.1. Electronic Health Records (EHR)
+
+2.5.1.1. Frontend Components
+PatientProfile (e.g., health history, vitals)
+DoctorNotes (e.g., visit summaries)
+2.5.1.2. Backend Components
+EHRService (e.g., record storage, retrieval)
+SecurityService (e.g., HIPAA compliance)
+2.5.1.3. Database Components
+RecordSchema (e.g., patient info, medical history)
+Data Encryption (e.g., secure sensitive data)
+2.5.2. Appointment Scheduling
+
+2.5.2.1. Frontend Components
+CalendarView (e.g., appointment slots)
+BookingForm (e.g., patient details, time selection)
+2.5.2.2. Backend Components
+SchedulingService (e.g., appointment booking)
+NotificationService (e.g., reminders)
+2.5.2.3. Database Components
+AppointmentSchema (e.g., patient, time, doctor)
+Indexes (e.g., optimize scheduling queries)
+2.5.3. Telemedicine
+
+2.5.3.1. Frontend Components
+VideoCallInterface (e.g., video, chat)
+SessionControls (e.g., mute, record)
+2.5.3.2. Backend Components
+VideoService (e.g., video streaming)
+SessionService (e.g., session management)
+2.5.3.3. Database Components
+SessionSchema (e.g., patient, doctor, time)
+Relationships (e.g., session-doctor mapping)
+2.6. Finance/Banking Application
+
+2.6.1. Account Management
+
+2.6.1.1. Frontend Components
+AccountSummary (e.g., balance, recent transactions)
+AccountSettings (e.g., profile, security)
+2.6.1.2. Backend Components
+AccountService (e.g., account management)
+SecurityService (e.g., authentication, authorization)
+2.6.1.3. Database Components
+AccountSchema (e.g., account number, balance)
+Data Encryption (e.g., secure financial data)
+2.6.2. Transaction History
+
+2.6.2.1. Frontend Components
+TransactionList (e.g., date, amount, description)
+FilterOptions (e.g., date range, transaction type)
+2.6.2.2. Backend Components
+TransactionService (e.g., transaction retrieval)
+NotificationService (e.g., transaction alerts)
+2.6.2.3. Database Components
+TransactionSchema (e.g., date, amount, description)
+Indexes (e.g., optimize queries)
+2.6.3. Budgeting Tools
+
+2.6.3.1. Frontend Components
+BudgetPlanner (e.g., income, expenses)
+GoalTracker (e.g., savings goals)
+2.6.3.2. Backend Components
+BudgetService (e.g., calculation, tracking)
+AnalyticsService (e.g., spending analysis)
+2.6.3.3. Database Components
+BudgetSchema (e.g., category, amount, period)
+Relationships (e.g., budget-transaction mapping)
+2.7. SaaS (Software as a Service) Application
+
+2.7.1. Subscription Management
+
+2.7.1.1. Frontend Components
+SubscriptionForm (e.g., plan selection)
+PaymentOptions (e.g., credit card, PayPal)
+2.7.1.2. Backend Components
+SubscriptionService (e.g., plan management)
+PaymentGateway (e.g., payment processing)
+2.7.1.3. Database Components
+SubscriptionSchema (e.g., plan, user, status)
+Relationships (e.g., user-subscription mapping)
+2.7.2. Multi-Tenant Architecture
+
+2.7.2.1. Backend Components
+TenantManager (e.g., tenant isolation, billing)
+API Rate Limiter
+2.7.2.2. Database Components
+TenantSchema (e.g., tenant ID, data partitioning)
+Migrations (e.g., tenant-specific schema updates)
+2.7.3. User Onboarding
+
+2.7.3.1. Frontend Components
+OnboardingWizard (e.g., multi-step forms)
+TourGuide (e.g., feature walkthrough)
+2.7.3.2. Backend Components
+UserService (e.g., user creation, management)
+NotificationService (e.g., welcome emails)
+2.7.3.3. Database Components
+UserSchema (e.g., name, email, preferences)
+Seeders (e.g., default user data)
+2.8. Real Estate Application
+
+2.8.1. Property Listings
+
+2.8.1.1. Frontend Components
+ListingGrid (e.g., property thumbnails, filters)
+PropertyDetails (e.g., image gallery, description)
+2.8.1.2. Backend Components
+ListingService (e.g., property data retrieval)
+SearchService (e.g., filtering, sorting)
+2.8.1.3. Database Components
+ListingSchema (e.g., address, price, description)
+Indexes (e.g., optimize search queries)
+2.8.2. Mortgage Calculator
+
+2.8.2.1. Frontend Components
+CalculatorForm (e.g., input fields, results)
+ChartDisplay (e.g., amortization graph)
+2.8.2.2. Backend Components
+CalculationService (e.g., mortgage calculations)
+2.8.2.3. Database Components
+No Database (calculations done in-memory)
+2.8.3. Virtual Tours
+
+2.8.3.1. Frontend Components
+TourViewer (e.g., 360-degree view, navigation)
+2.8.3.2. Backend Components
+MediaService (e.g., video streaming)
+2.8.3.3. Database Components
+MediaSchema (e.g., video files, metadata)
+Relationships (e.g., property-media mapping)
+2.9. Gaming Application
+
+2.9.1. Multiplayer Lobby
+
+2.9.1.1. Frontend Components
+LobbyUI (e.g., player list, chat)
+2.9.1.2. Backend Components
+LobbyService (e.g., player matchmaking)
+WebSocketService (e.g., real-time communication)
+2.9.1.3. Database Components
+PlayerSchema (e.g., username, stats)
+Relationships (e.g., lobby-player mapping)
+2.9.2. Leaderboards
+
+2.9.2.1. Frontend Components
+LeaderboardTable (e.g., player rankings)
+2.9.2.2. Backend Components
+LeaderboardService (e.g., score tracking)
+2.9.2.3. Database Components
+LeaderboardSchema (e.g., player, score)
+Indexes (e.g., optimize ranking queries)
+2.9.3. In-Game Purchases
+
+2.9.3.1. Frontend Components
+StoreUI (e.g., item catalog, purchase buttons)
+2.9.3.2. Backend Components
+PurchaseService (e.g., transaction handling)
+PaymentGateway (e.g., payment processing)
+2.9.3.3. Database Components
+PurchaseSchema (e.g., item, price, player)
+Relationships (e.g., player-purchase mapping)
+2.10. Content Management System (CMS)
+
+2.10.1. Content Editor
+
+2.10.1.1. Frontend Components
+WYSIWYG Editor (e.g., rich text editor)
+MediaLibrary (e.g., image/video upload)
+2.10.1.2. Backend Components
+ContentManager (e.g., content CRUD operations)
+PermissionsService (e.g., role-based access)
+2.10.1.3. Database Components
+ContentSchema (e.g., title, body, metadata)
+Triggers (e.g., auto-save, versioning)
+2.10.2. Media Management
+
+2.10.2.1. Frontend Components
+MediaGallery (e.g., thumbnails, filters)
+2.10.2.2. Backend Components
+MediaService (e.g., media storage, retrieval)
+2.10.2.3. Database Components
+MediaSchema (e.g., file path, metadata)
+Relationships (e.g., content-media mapping)
+2.10.3. SEO Tools
+
+2.10.3.1. Frontend Components
+SEODashboard (e.g., keywords, performance)
+2.10.3.2. Backend Components
+SEOToolService (e.g., meta tags, sitemaps)
+2.10.3.3. Database Components
+SEOSchema (e.g., keywords, rankings)
+Indexes (e.g., optimize SEO queries)
+3. Pages
+3.1. Dashboard
+
+3.1.1. Overview Page
+
+3.1.1.1. Frontend Components
+StatsWidgets (e.g., summary metrics)
+Charts (e.g., performance graphs)
+3.1.1.2. Backend Components
+AnalyticsService (e.g., data aggregation)
+3.1.1.3. Database Components
+DataSchema (e.g., metrics, time series)
+Indexes (e.g., optimize query performance)
+3.1.2. Analytics Page
+
+3.1.2.1. Frontend Components
+AnalyticsDashboard (e.g., data visualizations)
+3.1.2.2. Backend Components
+DataProcessor (e.g., data transformations)
+3.1.2.3. Database Components
+AnalyticsSchema (e.g., raw data, processed data)
+Relationships (e.g., data-source mapping)
+3.1.3. Settings Page
+
+3.1.3.1. Frontend Components
+SettingsForm (e.g., user preferences, toggles)
+3.1.3.2. Backend Components
+SettingsService (e.g., preference storage)
+3.1.3.3. Database Components
+SettingsSchema (e.g., preferences, values)
+Constraints (e.g., unique user settings)
+3.1.4. Notifications Page
+
+3.1.4.1. Frontend Components
+NotificationList (e.g., unread, read notifications)
+3.1.4.2. Backend Components
+NotificationService (e.g., delivery, tracking)
+3.1.4.3. Database Components
+NotificationSchema (e.g., type, status, timestamp)
+Indexes (e.g., optimize retrieval)
+3.1.5. Activity Logs
+
+3.1.5.1. Frontend Components
+ActivityTable (e.g., user actions, timestamps)
+3.1.5.2. Backend Components
+LogService (e.g., record, query logs)
+3.1.5.3. Database Components
+LogSchema (e.g., action, user, time)
+Indexes (e.g., optimize log retrieval)
+3.2. Authentication Pages
+
+3.2.1. Login
+
+3.2.1.1. Frontend Components
+LoginForm (e.g., email, password fields)
+3.2.1.2. Backend Components
+AuthMiddleware (e.g., JWT validation)
+3.2.1.3. Database Components
+UserSchema (e.g., email, hashed password)
+Indexes (e.g., optimize login queries)
+3.2.2. Registration
+
+3.2.2.1. Frontend Components
+RegistrationForm (e.g., user details input)
+3.2.2.2. Backend Components
+UserService (e.g., account creation)
+3.2.2.3. Database Components
+UserSchema (e.g., name, email, password)
+Constraints (e.g., unique email)
+3.2.3. Password Reset
+
+3.2.3.1. Frontend Components
+PasswordResetForm (e.g., email, new password)
+3.2.3.2. Backend Components
+PasswordService (e.g., token generation, validation)
+3.2.3.3. Database Components
+ResetTokenSchema (e.g., user, token, expiry)
+Indexes (e.g., optimize token queries)
+3.2.4. Two-Factor Authentication (2FA)
+
+3.2.4.1. Frontend Components
+OTPForm (e.g., input one-time password)
+3.2.4.2. Backend Components
+OTPService (e.g., token generation, validation)
+3.2.4.3. Database Components
+OTPSchema (e.g., user, token, expiry)
+Indexes (e.g., optimize token queries)
+3.3. Profile Pages
+
+3.3.1. User Profile
+
+3.3.1.1. Frontend Components
+ProfileDetails (e.g., name, bio, avatar)
+3.3.1.2. Backend Components
+ProfileService (e.g., profile data management)
+3.3.1.3. Database Components
+UserProfileSchema (e.g., name, bio, avatar)
+Constraints (e.g., unique username)
+3.3.2. Edit Profile
+
+3.3.2.1. Frontend Components
+EditForm (e.g., text fields, file upload)
+3.3.2.2. Backend Components
+ProfileService (e.g., profile updates)
+3.3.2.3. Database Components
+UserProfileSchema (e.g., updated name, bio)
+Relationships (e.g., user-profile mapping)
+3.3.3. Privacy Settings
+
+3.3.3.1. Frontend Components
+PrivacyToggle (e.g., switches for settings)
+3.3.3.2. Backend Components
+PrivacyService (e.g., preference management)
+3.3.3.3. Database Components
+PrivacySchema (e.g., settings, values)
+Indexes (e.g., optimize queries)
+3.3.4. Connected Accounts
+
+3.3.4.1. Frontend Components
+AccountList (e.g., connected accounts display)
+3.3.4.2. Backend Components
+OAuthService (e.g., third-party account linking)
+3.3.4.3. Database Components
+ConnectedAccountSchema (e.g., provider, token)
+Constraints (e.g., unique provider-user combo)
+3.4. Landing Page
+
+3.4.1. Hero Section
+
+3.4.1.1. Frontend Components
+HeroBanner (e.g., main image, CTA buttons)
+3.4.1.2. No Backend or Database Components (static content)
+3.4.2. Features Section
+
+3.4.2.1. Frontend Components
+FeatureCards (e.g., product features, benefits)
+3.4.2.2. No Backend or Database Components (static content)
+3.4.3. Testimonials Section
+
+3.4.3.1. Frontend Components
+TestimonialCarousel (e.g., user reviews, quotes)
+3.4.3.2. Backend Components
+ReviewService (e.g., testimonial retrieval)
+3.4.3.3. Database Components
+ReviewSchema (e.g., reviewer name, feedback)
+Indexes (e.g., optimize queries)
+3.4.4. Call-to-Action (CTA)
+
+3.4.4.1. Frontend Components
+CTABlock (e.g., button, text)
+3.4.4.2. No Backend or Database Components (static content)
+3.4.5. Pricing Plans
+
+3.4.5.1. Frontend Components
+PricingTable (e.g., plan comparison)
+3.4.5.2. Backend Components
+PricingService (e.g., plan data retrieval)
+3.4.5.3. Database Components
+PricingSchema (e.g., plan name, features, price)
+Indexes (e.g., optimize retrieval)
+3.5. Product Pages
+
+3.5.1. Product Listings
+
+3.5.1.1. Frontend Components
+ProductGrid (e.g., product thumbnails, filters)
+3.5.1.2. Backend Components
+ProductService (e.g., product data retrieval)
+3.5.1.3. Database Components
+ProductSchema (e.g., name, price, description)
+Indexes (e.g., optimize search queries)
+3.5.2. Product Details
+
+3.5.2.1. Frontend Components
+ProductDetails (e.g., image gallery, description)
+3.5.2.2. Backend Components
+ProductService (e.g., product detail retrieval)
+3.5.2.3. Database Components
+ProductSchema (e.g., detailed info, specifications)
+Relationships (e.g., product-category mapping)
+3.5.3. Shopping Cart
+
+3.5.3.1. Frontend Components
+CartSummary (e.g., items, totals)
+3.5.3.2. Backend Components
+CartService (e.g., cart management)
+3.5.3.3. Database Components
+CartSchema (e.g., items, quantities)
+Relationships (e.g., cart-user mapping)
+3.5.4. Wish List
+
+3.5.4.1. Frontend Components
+WishlistGrid (e.g., saved items display)
+3.5.4.2. Backend Components
+WishlistService (e.g., wishlist management)
+3.5.4.3. Database Components
+WishlistSchema (e.g., user, items)
+Relationships (e.g., user-wishlist mapping)
+3.6. Checkout Pages
+
+3.6.1. Billing Information
+
+3.6.1.1. Frontend Components
+BillingForm (e.g., address, payment details)
+3.6.1.2. Backend Components
+PaymentGateway (e.g., payment processing)
+3.6.1.3. Database Components
+BillingSchema (e.g., address, payment method)
+Indexes (e.g., optimize retrieval)
+3.6.2. Order Summary
+
+3.6.2.1. Frontend Components
+OrderSummary (e.g., items, totals, shipping)
+3.6.2.2. Backend Components
+OrderService (e.g., order summary retrieval)
+3.6.2.3. Database Components
+OrderSchema (e.g., items, totals, status)
+Relationships (e.g., order-user mapping)
+3.6.3. Payment Processing
+
+3.6.3.1. Frontend Components
+PaymentOptions (e.g., card, PayPal, etc.)
+3.6.3.2. Backend Components
+PaymentGateway (e.g., transaction handling)
+3.6.3.3. Database Components
+PaymentSchema (e.g., transaction ID, status)
+Constraints (e.g., unique transaction ID)
+3.6.4. Order Confirmation
+
+3.6.4.1. Frontend Components
+ConfirmationPage (e.g., order details, thank you message)
+3.6.4.2. Backend Components
+OrderService (e.g., confirmation data retrieval)
+3.6.4.3. Database Components
+OrderSchema (e.g., confirmation details)
+Relationships (e.g., order-user mapping)
+3.7. Blog Pages
+
+3.7.1. Blog Listings
+
+3.7.1.1. Frontend Components
+BlogList (e.g., post thumbnails, titles)
+3.7.1.2. Backend Components
+BlogService (e.g., post retrieval)
+3.7.1.3. Database Components
+BlogSchema (e.g., title, content, author)
+Indexes (e.g., optimize queries)
+3.7.2. Blog Post
+
+3.7.2.1. Frontend Components
+BlogContent (e.g., post body, images)
+3.7.2.2. Backend Components
+BlogService (e.g., post data retrieval)
+3.7.2.3. Database Components
+BlogSchema (e.g., detailed content)
+Relationships (e.g., blog-author mapping)
+3.7.3. Comment Section
+
+3.7.3.1. Frontend Components
+CommentForm (e.g., input fields)
+CommentList (e.g., display comments)
+3.7.3.2. Backend Components
+CommentService (e.g., comment management)
+3.7.3.3. Database Components
+CommentSchema (e.g., post, user, content)
+Relationships (e.g., comment-post mapping)
+3.7.4. Author Bio
+
+3.7.4.1. Frontend Components
+AuthorCard (e.g., name, bio, social links)
+3.7.4.2. Backend Components
+AuthorService (e.g., author data retrieval)
+3.7.4.3. Database Components
+AuthorSchema (e.g., name, bio, social links)
+Relationships (e.g., author-blog mapping)
+3.8. Admin Pages
+
+3.8.1. User Management
+
+3.8.1.1. Frontend Components
+UserTable (e.g., user list, filters)
+UserActions (e.g., edit, delete buttons)
+3.8.1.2. Backend Components
+UserService (e.g., user management)
+3.8.1.3. Database Components
+UserSchema (e.g., name, email, role)
+Constraints (e.g., unique email)
+3.8.2. Content Management
+
+3.8.2.1. Frontend Components
+ContentList (e.g., content items, filters)
+ContentEditor (e.g., WYSIWYG editor)
+3.8.2.2. Backend Components
+ContentService (e.g., content management)
+3.8.2.3. Database Components
+ContentSchema (e.g., title, body, status)
+Relationships (e.g., content-author mapping)
+3.8.3. System Settings
+
+3.8.3.1. Frontend Components
+SettingsForm (e.g., toggles, inputs)
+3.8.3.2. Backend Components
+SettingsService (e.g., settings management)
+3.8.3.3. Database Components
+SettingsSchema (e.g., key, value)
+Constraints (e.g., unique settings)
+3.8.4. Role-Based Access Control (RBAC)
+
+3.8.4.1. Frontend Components
+RoleManager (e.g., role creation, assignment)
+PermissionsMatrix (e.g., role-permission mapping)
+3.8.4.2. Backend Components
+RBACService (e.g., permission checks)
+3.8.4.3. Database Components
+RoleSchema (e.g., role name, permissions)
+Relationships (e.g., user-role mapping)
+3.8.5. Audit Logs
+
+3.8.5.1. Frontend Components
+LogViewer (e.g., action, user, timestamp)
+3.8.5.2. Backend Components
+LogService (e.g., logging actions)
+3.8.5.3. Database Components
+LogSchema (e.g., action, user, time)
+Indexes (e.g., optimize retrieval)
+3.9. Error Pages
+
+3.9.1. 404 Error Page
+
+3.9.1.1. Frontend Components
+ErrorMessage (e.g., 404 message, links)
+3.9.1.2. No Backend or Database Components (static content)
+3.9.2. 500 Error Page
+
+3.9.2.1. Frontend Components
+ErrorMessage (e.g., 500 message, links)
+3.9.2.2. Backend Components
+ErrorHandler (e.g., log error, notify admin)
+3.9.2.3. Database Components
+ErrorLogSchema (e.g., error details, timestamp)
+Indexes (e.g., optimize log retrieval)
+3.9.3. Maintenance Mode Page
+
+3.9.3.1. Frontend Components
+MaintenanceMessage (e.g., maintenance notice)
+3.9.3.2. Backend Components
+No Backend Components** (static content)
+3.9.3.3. Database Components
+No Database Components** (static content)
+3.10. About Us/Contact Pages
+
+3.10.1. Team Section
+
+3.10.1.1. Frontend Components
+TeamProfiles (e.g., name, bio, image)
+3.10.1.2. Backend Components
+TeamService (e.g., team data management)
+3.10.1.3. Database Components
+TeamSchema (e.g., name, bio, image)
+Indexes (e.g., optimize retrieval)
+3.10.2. Contact Form
+
+3.10.2.1. Frontend Components
+ContactForm (e.g., name, email, message)
+3.10.2.2. Backend Components
+EmailService (e.g., form submission handling)
+3.10.2.3. Database Components
+ContactFormSchema (e.g., name, email, message)
+Indexes (e.g., optimize retrieval)
+3.10.3. Map Integration
+
+3.10.3.1. Frontend Components
+MapView (e.g., location display)
+3.10.3.2. Third-Party Components
+MapAPI (e.g., Google Maps, Mapbox)
+3.10.3.3. No Database Components (data provided by third party)
+4. Frontend Components
+4.1. Custom Components
+
+4.1.1. ProductCard → Reusable Components
+
+Card Layout (e.g., image, title, price)
+Action Buttons (e.g., add to cart, view details)
+4.1.2. UserReview → Reusable Components
+
+Review Layout (e.g., rating stars, comment)
+Review Actions (e.g., helpful, reply)
+4.1.3. SupplierDetails → Common Components
+
+Supplier Info (e.g., name, contact, products)
+Supplier Actions (e.g., contact, view products)
+4.1.4. CustomTable → Common Components
+
+Table Layout (e.g., rows, columns)
+Table Actions (e.g., sorting, pagination)
+4.1.5. DynamicChart → Reusable Components
+
+Chart Layout (e.g., bar, line, pie)
+Data Binding (e.g., dynamic data source)
+4.2. Reusable Components
+
+4.2.1. Button → Common Components
+
+Button Styles (e.g., primary, secondary)
+Button Actions (e.g., click, hover)
+4.2.2. Modal → Common Components
+
+Modal Layout (e.g., header, body, footer)
+Modal Actions (e.g., open, close)
+4.2.3. Form Field → Common Components
+
+Input Types (e.g., text, number, email)
+Validation States (e.g., success, error)
+4.2.4. Card → Components Making Other Components
+
+Card Layout (e.g., image, text, actions)
+Card Actions (e.g., click, hover)
+4.2.5. Accordion → Components Making Other Components
+
+Accordion Panels (e.g., titles, content)
+Accordion Actions (e.g., expand, collapse)
+4.3. Common Components
+
+4.3.1. Navbar → Components Making Other Components
+
+Navbar Layout (e.g., links, logo, menu)
+Navbar Actions (e.g., open, close)
+4.3.2. Footer → Components Making Other Components
+
+Footer Layout (e.g., links, social icons)
+Footer Actions (e.g., scroll to top, contact)
+4.3.3. Sidebar → Components Making Other Components
+
+Sidebar Layout (e.g., menu, widgets)
+Sidebar Actions (e.g., expand, collapse)
+4.3.4. Pagination → Components Making Other Components
+
+Pagination Controls (e.g., next, previous)
+Pagination Actions (e.g., navigate, click)
+4.3.5. Breadcrumb → Components Making Other Components
+
+Breadcrumb Layout (e.g., path, separators)
+Breadcrumb Actions (e.g., navigate, click)
+4.4. Components Making Other Components
+
+4.4.1. Card → Elements (e.g., Text, Image, Button)
+
+Card Content (e.g., text, image)
+Card Actions (e.g., click, hover)
+4.4.2. Tooltip → Elements (e.g., Hoverable Text)
+
+Tooltip Content (e.g., text, icons)
+Tooltip Actions (e.g., hover, focus)
+4.4.3. List Group → Elements (e.g., List Items)
+
+List Items (e.g., text, icons)
+List Actions (e.g., select, click)
+4.4.4. Badge → Elements (e.g., Icon, Text)
+
+Badge Content (e.g., icon, text)
+Badge Actions (e.g., display, hide)
+4.4.5. Dropdown → Elements (e.g., Menu, Icon)
+
+Dropdown Menu (e.g., items, separators)
+Dropdown Actions (e.g., open, close)
+5. Backend Components
+5.1. Custom Components
+
+5.1.1. PaymentProcessor → Reusable Components
+
+Payment Methods (e.g., credit card, PayPal)
+Transaction Handling (e.g., success, failure)
+5.1.2. InventoryManager → Reusable Components
+
+Stock Levels (e.g., check, update)
+Inventory Actions (e.g., add, remove, transfer)
+5.1.3. UserNotification → Common Components
+
+Notification Types (e.g., email, SMS, push)
+Notification Actions (e.g., send, schedule)
+5.1.4. DataExporter → Common Components
+
+Export Formats (e.g., CSV, Excel, PDF)
+Export Actions (e.g., generate, download)
+5.1.5. ReportGenerator → Common Components
+
+Report Templates (e.g., summary, detailed)
+Report Actions (e.g., generate, export)
+5.2. Reusable Components
+
+5.2.1. AuthMiddleware → Common Components
+
+Authentication Methods (e.g., JWT, OAuth)
+Authorization Checks (e.g., roles, permissions)
+5.2.2. RequestValidator → Common Components
+
+Validation Rules (e.g., input format, constraints)
+Validation Actions (e.g., pass, fail)
+5.2.3. ErrorHandler → Common Components
+
+Error Types (e.g., 404, 500, custom errors)
+Error Actions (e.g., log, notify, display)
+5.2.4. CacheManager → Common Components
+
+Cache Strategies (e.g., in-memory, distributed)
+Cache Actions (e.g., store, retrieve, invalidate)
+5.2.5. LoggingService → Common Components
+
+Log Levels (e.g., info, warn, error)
+Log Actions (e.g., record, query, alert)
+5.3. Common Components
+
+5.3.1. APIController → Components Making Other Components
+
+API Endpoints (e.g., CRUD operations)
+API Actions (e.g., request, response)
+5.3.2. DataService → Components Making Other Components
+
+Data Operations (e.g., read, write, update)
+Data Actions (e.g., query, transform)
+5.3.3. JobScheduler → Components Making Other Components
+
+Job Types (e.g., cron jobs, scheduled tasks)
+Job Actions (e.g., start, stop, retry)
+5.3.4. MailerService → Components Making Other Components
+
+Email Types (e.g., transactional, marketing)
+Email Actions (e.g., send, schedule)
+5.3.5. QueueManager → Components Making Other Components
+
+Queue Types (e.g., message queues, task queues)
+Queue Actions (e.g., enqueue, dequeue)
+5.4. Components Making Other Components
+
+5.4.1. API Endpoint → Utility Functions
+
+Endpoint Routes (e.g., GET, POST, PUT, DELETE)
+Endpoint Actions (e.g., request, response)
+5.4.2. Utility Function → Elements (e.g., Helper Methods)
+
+Utility Methods (e.g., formatting, calculations)
+Utility Actions (e.g., invoke, return)
+5.4.3. Queue Handler → Utility Functions
+
+Queue Operations (e.g., process, retry)
+Queue Actions (e.g., enqueue, dequeue)
+5.4.4. Database Query Builder → Elements (e.g., SQL Query)
+
+Query Types (e.g., select, insert, update, delete)
+Query Actions (e.g., execute, return)
+5.4.5. Repository → Database Components
+
+Repository Methods (e.g., find, save, delete)
+Repository Actions (e.g., access data)
+6. Database Components
+6.1. Custom Components
+
+6.1.1. UserSchema → Reusable Components
+
+Fields (e.g., id, name, email, password)
+Relationships (e.g., user-role, user-profile)
+6.1.2. OrderSchema → Reusable Components
+
+Fields (e.g., orderId, userId, status)
+Relationships (e.g., order-product, order-user)
+6.1.3. ProductSchema → Reusable Components
+
+Fields (e.g., productId, name, price)
+Relationships (e.g., product-category, product-order)
+6.1.4. ReviewSchema → Reusable Components
+
+Fields (e.g., reviewId, userId, rating, comment)
+Relationships (e.g., review-product, review-user)
+6.1.5. InventorySchema → Reusable Components
+
+Fields (e.g., inventoryId, productId, quantity)
+Relationships (e.g., inventory-product, inventory-location)
+6.2. Reusable Components
+
+6.2.1. Migrations → Common Components
+
+Migration Types (e.g., schema updates, data changes)
+Migration Actions (e.g., apply, rollback)
+6.2.2. Seeders → Common Components
+
+Seeder Types (e.g., initial data, test data)
+Seeder Actions (e.g., seed, reset)
+6.2.3. Validators → Common Components
+
+Validation Rules (e.g., format, uniqueness)
+Validation Actions (e.g., pass, fail)
+6.2.4. Auditing → Common Components
+
+Audit Logs (e.g., changes, user actions)
+Audit Actions (e.g., record, query)
+6.2.5. Data Encryption → Common Components
+
+Encryption Types (e.g., AES, RSA)
+Encryption Actions (e.g., encrypt, decrypt)
+6.3. Common Components
+
+6.3.1. Connection Pool → Components Making Other Components
+
+Connection Handling (e.g., open, close)
+Connection Actions (e.g., acquire, release)
+6.3.2. Indexes → Components Making Other Components
+
+Index Types (e.g., primary, secondary, composite)
+Index Actions (e.g., create, drop)
+6.3.3. Triggers → Components Making Other Components
+
+Trigger Types (e.g., before insert, after update)
+Trigger Actions (e.g., invoke, rollback)
+6.3.4. Views → Components Making Other Components
+
+View Types (e.g., read-only, updatable)
+View Actions (e.g., create, query)
+6.3.5. Partitioning → Components Making Other Components
+
+Partition Types (e.g., range, list, hash)
+Partition Actions (e.g., create, split, merge)
+6.4. Components Making Other Components
+
+6.4.1. Relationships → Database Columns
+
+Relationship Types (e.g., one-to-one, one-to-many)
+Relationship Actions (e.g., join, map)
+6.4.2. Constraints → Database Columns
+
+Constraint Types (e.g., primary key, foreign key, unique)
+Constraint Actions (e.g., enforce, validate)
+6.4.3. Data Types → Database Columns
+
+Data Type Options (e.g., int, varchar, date)
+Data Type Actions (e.g., define, cast)
+6.4.4. Normalization → Database Columns
+
+Normalization Forms (e.g., 1NF, 2NF, 3NF)
+Normalization Actions (e.g., decompose, restructure)
+6.4.5. Query Optimization → SQL Queries
+
+Optimization Techniques (e.g., indexing, query planning)
+Optimization Actions (e.g., analyze, optimize)
+7. Integration
+7.1. API Components
+
+7.1.1. RESTful API → API Endpoint
+
+REST Operations (e.g., GET, POST, PUT, DELETE)
+API Actions (e.g., request, response)
+7.1.2. GraphQL API → API Endpoint
+
+GraphQL Operations (e.g., query, mutation, subscription)
+API Actions (e.g., execute, resolve)
+7.1.3. WebSocket API → API Controller
+
+WebSocket Events (e.g., connect, message, disconnect)
+API Actions (e.g., send, receive)
+7.1.4. gRPC Services → API Controller
+
+gRPC Methods (e.g., unary, streaming)
+API Actions (e.g., request, response)
+7.1.5. Third-Party API Integrations → API Controller
+
+API Types (e.g., payment, social media, analytics)
+API Actions (e.g., connect, query)
+7.2. Authentication Components
+
+7.2.1. JWT Authentication → AuthMiddleware
+
+JWT Operations (e.g., generate, validate)
+Authentication Actions (e.g., sign in, verify)
+7.2.2. OAuth Integration → API Components
+
+OAuth Flows (e.g., authorization code, implicit)
+Authentication Actions (e.g., grant access, refresh token)
+7.2.3. SAML Authentication → API Components
+
+SAML Operations (e.g., assertion, authentication)
+Authentication Actions (e.g., sign in, validate)
+7.2.4. Multi-Factor Authentication → API Components
+
+MFA Methods (e.g., SMS, email, authenticator app)
+Authentication Actions (e.g., verify, authenticate)
+7.2.5. Social Logins → API Components
+
+Social Providers (e.g., Google, Facebook, Twitter)
+Authentication Actions (e.g., sign in, authorize)
+7.3. Payment Gateway Components
+
+7.3.1. Stripe Integration → PaymentProcessor
+
+Stripe Operations (e.g., charges, refunds, subscriptions)
+Payment Actions (e.g., process, refund)
+7.3.2. PayPal Integration → PaymentProcessor
+
+PayPal Operations (e.g., payments, subscriptions)
+Payment Actions (e.g., process, refund)
+7.3.3. Square Integration → PaymentProcessor
+
+Square Operations (e.g., transactions, refunds)
+Payment Actions (e.g., process, refund)
+7.3.4. Cryptocurrency Payment Integration → PaymentProcessor
+
+Crypto Operations (e.g., transactions, wallets)
+Payment Actions (e.g., process, transfer)
+7.4. Third-Party Service Components
+
+7.4.1. Social Media Integrations → API Components
+
+Social Media APIs (e.g., Facebook Graph, Twitter API)
+Social Actions (e.g., post, fetch, engage)
+7.4.2. Email Service Providers → API Components
+
+Email APIs (e.g., SendGrid, Mailchimp)
+Email Actions (e.g., send, track, schedule)
+7.4.3. SMS/Push Notifications → API Components
+
+SMS APIs (e.g., Twilio, Nexmo)
+Notification Actions (e.g., send, schedule)
+7.4.4. Cloud Storage Integration → API Components
+
+Cloud Storage APIs (e.g., AWS S3, Google Cloud Storage)
+Storage Actions (e.g., upload, download, delete)
+7.4.5. AI/ML Services Integration → API Components
+
+AI/ML APIs (e.g., AWS Rekognition, Google Vision)
+AI/ML Actions (e.g., analyze, predict, classify)
+7.5. DevOps Components
+
+7.5.1. CI/CD Pipelines → Infrastructure as Code (IaC) Templates
+
+CI/CD Tools (e.g., Jenkins, GitLab CI, CircleCI)
+Pipeline Actions (e.g., build, test, deploy)
+7.5.2. Infrastructure as Code (IaC) Templates → Cloud Infrastructure
+
+IaC Tools (e.g., Terraform, CloudFormation)
+Infrastructure Actions (e.g., provision, manage)
+7.5.3. Monitoring & Logging → LoggingService
+
+Monitoring Tools (e.g., Prometheus, Datadog)
+Logging Actions (e.g., track, alert)
+7.5.4. Containerization & Orchestration → Infrastructure as Code
+
+Container Tools (e.g., Docker, Kubernetes)
+Orchestration Actions (e.g., deploy, scale)
+7.5.5. Security Scanning & Vulnerability Management → Security Tools
+
+Security Tools (e.g., Snyk, OWASP ZAP)
+Security Actions (e.g., scan, remediate)
+8. Cross-Cutting Concerns
+8.1. Security Components
+
+8.1.1. Input Validation → Validators
+
+Validation Rules (e.g., format, constraints)
+Validation Actions (e.g., pass, fail)
+8.1.2. Authentication & Authorization → AuthMiddleware
+
+Auth Methods (e.g., JWT, OAuth)
+Auth Actions (e.g., authenticate, authorize)
+8.1.3. Data Encryption → Data Encryption
+
+Encryption Types (e.g., AES, RSA)
+Encryption Actions (e.g., encrypt, decrypt)
+8.1.4. CSRF Protection → API Components
+
+CSRF Techniques (e.g., tokens, same-site cookies)
+CSRF Actions (e.g., validate, protect)
+8.1.5. Rate Limiting → API Components
+
+Rate Limit Techniques (e.g., token bucket, fixed window)
+Rate Limit Actions (e.g., enforce, log)
+8.2. Performance Components
+
+8.2.1. Caching Strategies → CacheManager
+
+Caching Techniques (e.g., in-memory, distributed)
+Caching Actions (e.g., store, retrieve)
+8.2.2. Load Balancing → Infrastructure as Code
+
+Load Balancing Techniques (e.g., round-robin, least connections)
+Load Balancing Actions (e.g., distribute, manage)
+8.2.3. CDN Integration → Web Components
+
+CDN Providers (e.g., Cloudflare, Akamai)
+CDN Actions (e.g., cache, deliver)
+8.2.4. Lazy Loading → Frontend Components
+
+Lazy Loading Techniques (e.g., images, components)
+Lazy Loading Actions (e.g., load, render)
+8.2.5. Code Splitting → Frontend Components
+
+Code Splitting Techniques (e.g., dynamic imports, bundles)
+Code Splitting Actions (e.g., split, load)
+8.3. Testing Components
+
+8.3.1. Unit Testing → Utility Functions
+
+Unit Testing Tools (e.g., Jest, Mocha)
+Unit Testing Actions (e.g., test, assert)
+8.3.2. Integration Testing → API Components
+
+Integration Testing Tools (e.g., Postman, Cypress)
+Integration Testing Actions (e.g., test, validate)
+8.3.3. End-to-End Testing → Frontend Components
+
+E2E Testing Tools (e.g., Selenium, Cypress)
+E2E Testing Actions (e.g., run, report)
+8.3.4. Performance Testing → Backend Components
+
+Performance Testing Tools (e.g., JMeter, K6)
+Performance Testing Actions (e.g., simulate, measure)
+8.3.5. Security Testing → Security Tools
+
+Security Testing Tools (e.g., OWASP ZAP, Burp Suite)
+Security Testing Actions (e.g., scan, test)

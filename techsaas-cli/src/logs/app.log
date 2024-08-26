@@ -1,0 +1,8 @@
+# Log file for application events and errors
+[2024-08-26T03:01:11.770Z] [ERROR] Error during setup:
+[2024-08-26T03:03:39.734Z] [ERROR] Hook scripts/preSetup.mjs does not export a default function.
+[2024-08-26T03:03:39.737Z] [INFO] Executed hook: scripts/postSetup.mjs
+[2024-08-26T03:03:39.737Z] [INFO] Setup completed for default environment.
+[2024-08-26T03:05:43.808Z] [INFO] Executed hook: scripts/preSetup.mjs
+[2024-08-26T03:05:43.813Z] [INFO] Executed hook: scripts/postSetup.mjs
+[2024-08-26T03:05:43.813Z] [INFO] Setup completed for default environment.

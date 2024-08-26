@@ -3,34 +3,34 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger on push to the 'main' branch
+      - main  # Trigger on push to 'main' branch
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the entire repository from the root
+      # Step 1: Checkout code
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # Updated to v3 to support Node.js 16/20
 
       # Step 2: Set up Node.js environment
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3  # Updated to v3 to support Node.js 16/20
         with:
-          node-version: '14'  # Adjust Node.js version as needed
+          node-version: '20'  # Use the latest Node.js version
 
-      # Step 3: Install dependencies for the frontend
+      # Step 3: Install frontend dependencies
       - name: Install frontend dependencies
         run: npm install --prefix techsaas-vision-frontend
 
-      # Step 4: Build the frontend project
+      # Step 4: Build frontend project
       - name: Build frontend
         run: npm run build --prefix techsaas-vision-frontend
 
-      # Step 5: Deploy the frontend build to GitHub Pages
+      # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: techsaas-vision-frontend/build  # Point to the frontend build directory
+          publish_dir: techsaas-vision-frontend/build

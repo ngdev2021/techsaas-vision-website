@@ -2,6 +2,7 @@
   "name": "techsaas-vision-frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ngdev2021.github.io/techsaas-vision-website/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -25,13 +26,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-
-  "predeploy": "npm run build",
-
-  "deploy": "gh-pages -d build",
-  "server": "nodemon ../techsaas-vision-backend/server.js",
-  "client": "npm start --prefix techsaas-vision-frontend"
-
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "server": "nodemon ../techsaas-vision-backend/server.js",
+    "client": "npm start --prefix techsaas-vision-frontend"
   },
   "eslintConfig": {
     "extends": [

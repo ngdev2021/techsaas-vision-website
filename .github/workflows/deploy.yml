@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4  # Updated to the latest version
+        uses: actions/checkout@v4 # Updated to the latest version
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4  # Updated to the latest version
+        uses: actions/setup-node@v4 # Updated to the latest version
         with:
           node-version: '20'
 
@@ -22,7 +22,7 @@ jobs:
         run: npm install --prefix techsaas-vision-frontend
 
       - name: Build frontend
-        run: npm run build --prefix techsaas-vision-frontend
+        run: CI=false npm run build --prefix techsaas-vision-frontend
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

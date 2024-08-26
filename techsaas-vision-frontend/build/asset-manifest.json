@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.7fdc7bd4.css",
+    "main.css": "/static/css/main.cb9eeef1.css",
     "main.js": "/static/js/main.846f403b.js",
     "static/js/453.67ac3930.chunk.js": "/static/js/453.67ac3930.chunk.js",
     "static/media/logovideo.mp4": "/static/media/logovideo.f0ca45477dd79fe27b62.mp4",
@@ -56,12 +56,12 @@
     "static/media/restaurant-icon.svg": "/static/media/restaurant-icon.fbbc49d541b13a9fb74ce3ce7a5b41a9.svg",
     "static/media/digital-transformation-icon.svg": "/static/media/digital-transformation-icon.eeab98bf33e93e314afeff3b2b25fefc.svg",
     "static/media/entertainment-icon.svg": "/static/media/entertainment-icon.5942cd5327336e65fa45da9d15c30579.svg",
-    "main.7fdc7bd4.css.map": "/static/css/main.7fdc7bd4.css.map",
+    "main.cb9eeef1.css.map": "/static/css/main.cb9eeef1.css.map",
     "main.846f403b.js.map": "/static/js/main.846f403b.js.map",
     "453.67ac3930.chunk.js.map": "/static/js/453.67ac3930.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7fdc7bd4.css",
+    "static/css/main.cb9eeef1.css",
     "static/js/main.846f403b.js"
   ]
 }

@@ -208,3 +208,23 @@
     padding: 8px 0;
   }
 }
+
+@media (max-width: 400px) {
+  .footer-cta h2 {
+    font-size: 1.2rem;
+  }
+  .footer-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3rem;
+    padding: 5px;
+    height:10rem;
+  }
+  .footer-cta .cta-button {
+    width: 100%;
+    padding: 8px 0;
+    margin: 3px;
+  }
+}

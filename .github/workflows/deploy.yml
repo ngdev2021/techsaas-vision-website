@@ -3,22 +3,22 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger on push to 'main' branch
+      - main  # Trigger on push to the 'main' branch
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout code
+      # Step 1: Checkout code (use the latest version)
       - name: Checkout code
-        uses: actions/checkout@v3  # Updated to v3 to support Node.js 16/20
+        uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js environment
+      # Step 2: Set up Node.js environment (use the latest version)
       - name: Set up Node.js
-        uses: actions/setup-node@v3  # Updated to v3 to support Node.js 16/20
+        uses: actions/setup-node@v3
         with:
-          node-version: '20'  # Use the latest Node.js version
+          node-version: '20'  # Use Node.js 20
 
       # Step 3: Install frontend dependencies
       - name: Install frontend dependencies

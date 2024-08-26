@@ -24,6 +24,10 @@ jobs:
       - name: Build frontend
         run: CI=false npm run build --prefix techsaas-vision-frontend
 
+      - name: List build files
+        run: ls -al techsaas-vision-frontend/build
+
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

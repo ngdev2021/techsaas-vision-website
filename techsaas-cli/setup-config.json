@@ -1,0 +1,136 @@
+{
+  "default": {
+    "directories": [
+      {
+        "path": "src",
+        "condition": "always"
+      },
+      {
+        "path": "src/generators",
+        "condition": "always"
+      },
+      {
+        "path": "src/utils",
+        "condition": "always"
+      },
+      {
+        "path": "src/config",
+        "condition": "environment !== 'production'"
+      }
+    ],
+    "files": [
+      {
+        "path": "src/generators/componentGenerator.js",
+        "content": "// Component generator logic\n",
+        "backup": true
+      },
+      {
+        "path": "src/generators/serviceGenerator.js",
+        "content": "// Service generator logic\n",
+        "backup": true
+      },
+      {
+        "path": "src/config/settings.js",
+        "content": "// Default settings\n",
+        "replacements": {
+          "API_URL": "http://localhost:3000"
+        },
+        "backup": true,
+        "condition": "environment !== 'production'"
+      }
+    ],
+    "hooks": {
+      "preSetup": "scripts/preSetup.mjs",
+      "postSetup": "scripts/postSetup.mjs"
+    }
+  },
+  "development": {
+    "directories": [
+      {
+        "path": "src/dev",
+        "condition": "always"
+      },
+      {
+        "path": "src/utils",
+        "condition": "always"
+      }
+    ],
+    "files": [
+      {
+        "path": "src/dev/devConfig.js",
+        "content": "// Development config\n",
+        "replacements": {
+          "ENV": "development",
+          "DEBUG_MODE": "true"
+        },
+        "backup": true
+      }
+    ],
+    "hooks": {
+      "preSetup": "scripts/devPreSetup.mjs",
+      "postSetup": "scripts/devPostSetup.mjs"
+    }
+  },
+  "production": {
+    "directories": [
+      {
+        "path": "src/prod",
+        "condition": "always"
+      },
+      {
+        "path": "src/utils",
+        "condition": "always"
+      }
+    ],
+    "files": [
+      {
+        "path": "src/prod/prodConfig.js",
+        "content": "// Production config\n",
+        "replacements": {
+          "ENV": "production",
+          "DEBUG_MODE": "false"
+        },
+        "backup": true
+      }
+    ],
+    "hooks": {
+      "preSetup": "scripts/prodPreSetup.mjs",
+      "postSetup": "scripts/prodPostSetup.mjs"
+    }
+  },
+  "staging": {
+    "directories": [
+      {
+        "path": "src/staging",
+        "condition": "always"
+      },
+      {
+        "path": "src/utils",
+        "condition": "always"
+      }
+    ],
+    "files": [
+      {
+        "path": "src/staging/stagingConfig.js",
+        "content": "// Staging config\n",
+        "replacements": {
+          "ENV": "staging",
+          "DEBUG_MODE": "true"
+        },
+        "backup": true
+      }
+    ],
+    "hooks": {
+      "preSetup": "scripts/stagingPreSetup.mjs",
+      "postSetup": "scripts/stagingPostSetup.mjs"
+    }
+  },
+  "custom": {
+    "directories": [],
+    "files": [],
+    "hooks": {
+      "preSetup": null,
+      "postSetup": null
+    }
+  }
+}

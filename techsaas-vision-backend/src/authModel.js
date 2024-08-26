@@ -1,0 +1,1 @@
+const mongoose = require('mongoose'); const authSchema = new mongoose.Schema({ /* Schema */ }); module.exports = mongoose.model('Auth', authSchema);

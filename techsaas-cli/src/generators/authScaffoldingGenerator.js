@@ -1,0 +1,1 @@
+// Authentication scaffolding generator logic

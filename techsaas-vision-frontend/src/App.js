@@ -19,6 +19,7 @@ import ServicesPage from './pages/Services/ServicesPage/ServicesPage';
 import LandingPage from './pages/LandingPage/LandingPage';
 import MysteryBoxSection from './components/MysteryBoxSection/MysteryBoxSection';
 import TestComponent from './Playground/TestComponent';
+import Login from './pages/Login/Login';
 
 function App() {
   const { theme, showModal } = useTheme();
@@ -72,6 +73,7 @@ function App() {
                 />
               }
             />
+            <Route path="/login" element={<Login />} />
             <Route path="/playground" element={<TestComponent />} />
           </Routes>
         </div>

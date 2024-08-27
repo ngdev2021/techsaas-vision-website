@@ -20,6 +20,8 @@ import LandingPage from './pages/LandingPage/LandingPage';
 import MysteryBoxSection from './components/MysteryBoxSection/MysteryBoxSection';
 import TestComponent from './Playground/TestComponent';
 import Login from './pages/Login/Login';
+import DiscoverHow from './pages/DiscoverHow/DiscoverHow';
+import SeeOurProcess from './pages/SeeOurProcess/SeeOurProcess';
 
 function App() {
   const { theme, showModal } = useTheme();
@@ -75,6 +77,11 @@ function App() {
             />
             <Route path="/login" element={<Login />} />
             <Route path="/playground" element={<TestComponent />} />
+            <Route path="/discover-how" element={<DiscoverHow />} />
+            <Route
+              path="/see-our-process"
+              element={<SeeOurProcess />}
+            />
           </Routes>
         </div>
         <FooterCTA

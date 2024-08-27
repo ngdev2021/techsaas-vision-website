@@ -124,6 +124,13 @@ const Home = () => {
     return <div>Loading...</div>;
   }
 
+  // Function to scroll to testimonials
+  const scrollToTestimonials = () => {
+    document
+      .getElementById('testimonials-section')
+      .scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div
       className="home-page"
@@ -148,7 +155,7 @@ const Home = () => {
         title="Your Partner in Innovation"
         content="At TechSaaS Vision, we're not just developers—we're your digital architects, crafting solutions that push boundaries and set you apart from the competition."
         buttonText="Discover How"
-        buttonAction={() => console.log('Navigate to How')}
+        buttonAction="/discover-how"
       />
 
       {/* Our Process Section */}
@@ -156,19 +163,21 @@ const Home = () => {
         title="From Concept to Reality"
         content="We take your ideas and turn them into digital masterpieces. With a focus on collaboration and transparency, our process ensures that your vision is realized at every stage."
         buttonText="See Our Process"
-        buttonAction={() => console.log('Navigate to Process')}
+        buttonAction="/see-our-process"
       />
-
-      {/* Testimonials */}
-      <Testimonials testimonials={dummyTestimonials} />
 
       {/* Client Success Stories Section */}
       <Section
         title="Success Speaks for Itself"
         content="Our clients' success is our greatest achievement. Hear from our clients and see how TechSaaS Vision has transformed their digital landscapes."
         buttonText="Read Testimonials"
-        buttonAction={() => console.log('Navigate to Testimonials')}
+        buttonAction={scrollToTestimonials} // Scroll to testimonials section
       />
+
+      {/* Testimonials */}
+      <div id="testimonials-section">
+        <Testimonials testimonials={dummyTestimonials} />
+      </div>
 
       {/* Footer CTA */}
       <FooterCTA />

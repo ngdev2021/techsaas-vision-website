@@ -1,56 +1,94 @@
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
 .service-card {
-  background-color: var(--background-color);
-  color: var(--text-color); /* Ensures the text color is themed */
-  border: 1px solid var(--accent-color);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  flex: 1 1 320px;
+  max-width: 400px;
+  min-height: 100%;
+  border: 1px solid var(--primary-color);
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--card-background-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   text-align: center;
 }
 
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.service-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
 }
 
-.ribbon-badge {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--accent-color);
-  color: var(--badge-text-color); /* Themed badge text color */
-  padding: 5px 0;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 8px 8px 0 0;
-}
-
-.icon-container {
+.service-card p {
+  font-size: 1.1rem;
   margin-bottom: 15px;
 }
 
-.service-icon {
-  width: 50px;
-  height: 50px;
-  color: var(--primary-color); /* Themed icon color */
-}
-
-.price {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--accent-color);
-}
-
-.details-list {
-  margin-top: 15px;
-  padding-left: 0;
-  list-style-type: none;
-}
-
 .details-list li {
-  margin-bottom: 10px;
-  color: var(--text-color); /* Ensure list items are also themed */
+  font-size: 1rem;
+}
+
+.service-card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+@media (max-width: 829px) {
+  .service-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .service-card {
+    flex: 1 1 100%; /* Cards stack in a single column on smaller screens */
+  }
+
+  .service-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .service-card p {
+    font-size: 1rem;
+  }
+
+  .details-list li {
+    font-size: 0.9rem;
+  }
+
+  .service-card button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .service-card {
+    flex:1 1 100%;
+    padding: 20px;
+  }
+
+  .service-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+  }
+
+  .details-list li {
+    font-size: 0.8rem;
+  }
+
+  .service-card button {
+    font-size: 0.8rem;
+  }
 }

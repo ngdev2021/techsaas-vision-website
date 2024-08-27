@@ -1,0 +1,1 @@
+import React from 'react'; import { render } from '@testing-library/react'; import CTASection from './CTASection'; test('renders CTASection', () => { render(<CTASection />); });

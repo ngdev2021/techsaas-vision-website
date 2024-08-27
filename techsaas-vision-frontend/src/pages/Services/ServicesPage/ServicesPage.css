@@ -1,28 +1,37 @@
 .services-page {
+  display: flex;
+  flex-direction: column;
   padding: 60px 20px;
+  margin-bottom: 60px; /* Ensure page has bottom margin */
 }
 
 .tier-section {
   margin-bottom: 60px;
   animation: fadeInUp 1s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content */
 }
 
 .tier-section.low-tier {
   background: linear-gradient(135deg, #f0f9ff, #c3eaf7);
   padding: 30px;
   border-radius: 10px;
+  width: 100%;
 }
 
 .tier-section.mid-tier {
   background: linear-gradient(135deg, #e9f7ec, #a0d2b5);
   padding: 30px;
   border-radius: 10px;
+  width: 100%;
 }
 
 .tier-section.high-tier {
   background: linear-gradient(135deg, #fef1e6, #fac090);
   padding: 30px;
   border-radius: 10px;
+  width: 100%;
 }
 
 .tier-section h3 {
@@ -32,17 +41,20 @@
 }
 
 .service-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
 }
 
 .service-card {
-  border: 1px solid let(--primary-color);
+  flex: 1 1 320px;
+  max-width: 400px;
+  border: 1px solid var(--primary-color);
   padding: 30px;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: let(--card-background-color);
+  background-color: var(--card-background-color);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
 }
@@ -55,7 +67,7 @@
 .service-card h3 {
   font-size: 1.8rem;
   margin-bottom: 10px;
-  color: let(--primary-color);
+  color: var(--primary-color);
 }
 
 .service-card p {
@@ -66,7 +78,7 @@
 .service-card span {
   font-size: 1.2rem;
   font-weight: bold;
-  color: let(--accent-color);
+  color: var(--accent-color);
 }
 
 .service-card button {
@@ -75,14 +87,14 @@
   font-size: 1rem;
   border: none;
   border-radius: 5px;
-  background-color: let(--button-background-color);
-  color: let(--button-text-color);
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .service-card button:hover {
-  background-color: let(--button-hover-color);
+  background-color: var(--button-hover-color);
 }
 
 .service-card .badge {
@@ -108,7 +120,7 @@
 .mid-tier-cta-banner h3 {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: let(--primary-color);
+  color: var(--primary-color);
 }
 
 .mid-tier-cta-banner .cta-button {
@@ -116,19 +128,21 @@
   font-size: 1.2rem;
   border: none;
   border-radius: 5px;
-  background-color: let(--button-background-color);
-  color: let(--button-text-color);
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .mid-tier-cta-banner .cta-button:hover {
-  background-color: let(--button-hover-color);
+  background-color: var(--button-hover-color);
 }
 
+/* Mobile-specific styles */
 @media (max-width: 768px) {
   .service-cards {
-    grid-template-columns: 1fr;
+    /* flex-direction: column; */
+    align-items: center; /* Center cards on mobile */
   }
 
   .mid-tier-cta-banner h3 {

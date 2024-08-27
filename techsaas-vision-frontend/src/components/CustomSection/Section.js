@@ -1,11 +1,25 @@
 import React from 'react';
 import { useThemeSettings } from '../../context/theme/ThemeSettingsContext/ThemeSettingsContext';
+import { useNavigate } from 'react-router-dom';
 import './Section.css';
 
-const Section = ({ title, content, buttonText, buttonAction }) => {
+const Section = ({
+  title,
+  content,
+  buttonText,
+  buttonAction,
+  additionalContent,
+}) => {
   const themeSettings = useThemeSettings();
+  const navigate = useNavigate();
 
-  console.log('Current theme settings:', themeSettings); // Debugging line
+  const handleButtonClick = () => {
+    if (typeof buttonAction === 'string') {
+      navigate(buttonAction);
+    } else if (typeof buttonAction === 'function') {
+      buttonAction();
+    }
+  };
 
   return (
     <section
@@ -22,6 +36,8 @@ const Section = ({ title, content, buttonText, buttonAction }) => {
         {title}
       </h2>
       <p>{content}</p>
+      {additionalContent}
+
       {buttonText && buttonAction && (
         <button
           className="cta-button"
@@ -29,7 +45,7 @@ const Section = ({ title, content, buttonText, buttonAction }) => {
             backgroundColor: themeSettings.colors.accent || '#007bff',
             color: themeSettings.colors.buttonText || '#ffffff',
           }}
-          onClick={buttonAction}
+          onClick={handleButtonClick}
         >
           {buttonText}
         </button>

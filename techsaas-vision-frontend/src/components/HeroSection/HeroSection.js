@@ -17,8 +17,14 @@ const HeroSection = ({
   const themeSettings = useThemeSettings();
   const navigate = useNavigate();
 
+  // Ensure buttonAction is a function or a string and behaves accordingly
+
   const handleButtonClick = () => {
-    navigate(buttonAction);
+    if (typeof buttonAction === 'string') {
+      navigate(buttonAction);
+    } else if (typeof buttonAction === 'function') {
+      buttonAction();
+    }
   };
 
   return (

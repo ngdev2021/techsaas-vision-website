@@ -37,8 +37,9 @@ const ServicesPage = () => {
       className="services-page"
       style={{
         backgroundColor: themeSettings.colors.background,
-        color: themeSettings.colors.text, // Adjusted text color
+        color: themeSettings.colors.text,
         fontFamily: themeSettings.typography.fontFamily,
+        marginBottom: '2rem', // Ensure margin at the bottom
       }}
     >
       <SectionHeader
@@ -46,11 +47,13 @@ const ServicesPage = () => {
         subtitle={`Explore the best packages tailored for ${selectedTier}`}
         themeSettings={themeSettings}
       />
-      <ComparisonChart
-        selectedTier={selectedTier}
-        onSelectTier={handleTierSelection}
-        themeSettings={themeSettings}
-      />
+      <div className="comparison-chart-wrapper">
+        <ComparisonChart
+          selectedTier={selectedTier}
+          onSelectTier={handleTierSelection}
+          themeSettings={themeSettings}
+        />
+      </div>
       <div className="services-overview">
         <TierSection
           tier={filteredServicesData.tier}

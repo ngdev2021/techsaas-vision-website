@@ -37,7 +37,6 @@ const Navigation = ({ toggleModal, userName }) => {
         <div className="nav-logo">
           <Link to="/">
             <img src={logo} alt="TechSaas Vision" />
-            TechSaas Vision
           </Link>
         </div>
         <button

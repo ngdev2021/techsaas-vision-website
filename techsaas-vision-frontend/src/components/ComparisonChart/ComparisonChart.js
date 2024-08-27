@@ -1,159 +1,162 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ComparisonChart.css';
 import Button from '../Button/Button';
-import Tooltip from '../Tooltip/Tooltip';
 
 const comparisonData = [
   {
-    feature: 'Responsive Design',
-    freshman: 'Yes',
-    primeTime: 'Yes',
-    mogul: 'Yes',
-    legendary: 'Yes',
+    tier: 'Freshman',
+    description: 'Starter level services, ideal for beginners.',
+    features: [
+      { feature: 'Responsive Design', available: 'Yes' },
+      { feature: 'Custom Pages', available: '3 Pages' },
+      { feature: 'E-Commerce', available: 'No' },
+      { feature: 'SEO Optimization', available: 'Basic' },
+      { feature: 'Support', available: 'Limited' },
+    ],
   },
   {
-    feature: 'Custom Pages',
-    freshman: '3 Pages',
-    primeTime: '10 Pages',
-    mogul: '20+ Pages',
-    legendary: 'Fully Custom',
+    tier: 'Prime Time',
+    description: 'Mid-tier services for growing businesses.',
+    features: [
+      { feature: 'Responsive Design', available: 'Yes' },
+      { feature: 'Custom Pages', available: '10 Pages' },
+      { feature: 'E-Commerce', available: 'Basic' },
+      { feature: 'SEO Optimization', available: 'On-Page' },
+      { feature: 'Support', available: 'Standard' },
+    ],
   },
   {
-    feature: 'E-Commerce',
-    freshman: 'No',
-    primeTime: 'Basic',
-    mogul: 'Advanced',
-    legendary: 'Enterprise',
+    tier: 'Mogul',
+    description: 'Advanced services for established businesses.',
+    features: [
+      { feature: 'Responsive Design', available: 'Yes' },
+      { feature: 'Custom Pages', available: '20+ Pages' },
+      { feature: 'E-Commerce', available: 'Advanced' },
+      { feature: 'SEO Optimization', available: 'Advanced' },
+      { feature: 'Support', available: 'Ongoing' },
+    ],
   },
   {
-    feature: 'SEO Optimization',
-    freshman: 'Basic',
-    primeTime: 'On-Page',
-    mogul: 'Advanced',
-    legendary: 'Full Service',
-  },
-  {
-    feature: 'Support',
-    freshman: 'Limited',
-    primeTime: 'Standard',
-    mogul: 'Ongoing',
-    legendary: 'Dedicated',
+    tier: 'Legendary',
+    description: 'Elite services for industry leaders.',
+    features: [
+      { feature: 'Responsive Design', available: 'Yes' },
+      { feature: 'Custom Pages', available: 'Fully Custom' },
+      { feature: 'E-Commerce', available: 'Enterprise' },
+      { feature: 'SEO Optimization', available: 'Full Service' },
+      { feature: 'Support', available: 'Dedicated' },
+    ],
   },
 ];
 
 const ComparisonChart = ({ onSelectTier, themeSettings }) => {
+  const [openCard, setOpenCard] = useState(null);
+
+  const toggleCard = (tier) => {
+    setOpenCard(openCard === tier ? null : tier);
+  };
+
   return (
-    <div
-      className="comparison-chart"
-      style={{
-        backgroundColor: themeSettings.colors.background,
-        color: themeSettings.colors.text,
-      }}
-    >
-      <h3 style={{ color: themeSettings.colors.text }}>
-        Compare Our Packages
-      </h3>
-      <table>
-        <thead>
-          <tr>
-            <th style={{ color: themeSettings.colors.text }}>
-              Features
-            </th>
-            <th style={{ color: themeSettings.colors.text }}>
-              Freshman
-              <Tooltip text="Starter level services, ideal for beginners." />
-            </th>
-            <th style={{ color: themeSettings.colors.text }}>
-              Prime Time
-              <Tooltip text="Mid-tier services for growing businesses." />
-            </th>
-            <th style={{ color: themeSettings.colors.text }}>
-              Mogul
-              <Tooltip text="Advanced services for established businesses." />
-            </th>
-            <th style={{ color: themeSettings.colors.text }}>
-              Legendary
-              <Tooltip text="Elite services for industry leaders." />
-            </th>
-          </tr>
-          <tr className="button-row">
-            <th></th> {/* Empty cell for alignment */}
-            <th>
-              <Button
-                onClick={() => onSelectTier('Freshman')}
-                label="Choose"
-                style={{
-                  backgroundColor:
-                    themeSettings.colors.buttonBackground,
-                  color: themeSettings.colors.buttonText,
-                  borderColor: themeSettings.colors.buttonBorderColor,
-                }}
-              />
-            </th>
-            <th>
-              <Button
-                onClick={() => onSelectTier('Prime Time')}
-                label="Choose"
-                style={{
-                  backgroundColor:
-                    themeSettings.colors.buttonBackground,
-                  color: themeSettings.colors.buttonText,
-                  borderColor: themeSettings.colors.buttonBorderColor,
-                }}
-              />
-            </th>
-            <th>
-              <Button
-                onClick={() => onSelectTier('Mogul')}
-                label="Choose"
-                style={{
-                  backgroundColor:
-                    themeSettings.colors.buttonBackground,
-                  color: themeSettings.colors.buttonText,
-                  borderColor: themeSettings.colors.buttonBorderColor,
-                }}
-              />
-            </th>
-            <th>
-              <Button
-                onClick={() => onSelectTier('Freshman')}
-                label="Choose"
-                style={{
-                  backgroundColor:
-                    themeSettings.colors.buttonBackground ||
-                    '#007bff',
-                  color: themeSettings.colors.buttonText || '#ffffff',
-                  borderColor:
-                    themeSettings.colors.buttonBorderColor ||
-                    '#0056b3',
-                }}
-              />
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {comparisonData.map((row, index) => (
-            <tr key={index}>
-              <td style={{ color: themeSettings.colors.text }}>
-                {row.feature}
-              </td>
-              <td style={{ color: themeSettings.colors.text }}>
-                {row.freshman}
-              </td>
-              <td style={{ color: themeSettings.colors.text }}>
-                {row.primeTime}
-              </td>
-              <td style={{ color: themeSettings.colors.text }}>
-                {row.mogul}
-              </td>
-              <td style={{ color: themeSettings.colors.text }}>
-                {row.legendary}
-              </td>
+    <>
+      {/* Desktop/Tablet View - Table */}
+      <div
+        className="comparison-chart"
+        style={{ backgroundColor: themeSettings.colors.background }}
+      >
+        <h3 className="comparison-title">Compare Our Packages</h3>
+        <table className="comparison-table">
+          <thead>
+            <tr>
+              <th>Features</th>
+              {comparisonData.map((tier) => (
+                <th key={tier.tier}>{tier.tier}</th>
+              ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody>
+            {comparisonData[0].features.map((feature, rowIndex) => (
+              <tr key={rowIndex}>
+                <td>{feature.feature}</td>
+                {comparisonData.map((tier, colIndex) => (
+                  <td key={colIndex}>
+                    {tier.features[rowIndex].available}
+                  </td>
+                ))}
+              </tr>
+            ))}
+            <tr>
+              <td></td> {/* Empty cell for alignment */}
+              {comparisonData.map((tier, index) => (
+                <td key={index}>
+                  <Button
+                    onClick={() => onSelectTier(tier.tier)}
+                    label="Choose"
+                    style={{
+                      backgroundColor:
+                        themeSettings.colors.buttonBackground,
+                      color: themeSettings.colors.buttonText,
+                      borderColor:
+                        themeSettings.colors.buttonBorderColor,
+                    }}
+                  />
+                </td>
+              ))}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      {/* Mobile View - Accordion */}
+      <div className="comparison-accordion">
+        {comparisonData.map((tierData, index) => (
+          <div key={index} className="accordion-card">
+            <div
+              className="accordion-header"
+              onClick={() => toggleCard(tierData.tier)}
+              style={{
+                backgroundColor: themeSettings.colors.primary,
+              }}
+            >
+              {tierData.tier}
+              <svg
+                className={openCard === tierData.tier ? 'rotate' : ''}
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path fill="currentColor" d="M7 10l5 5 5-5z"></path>
+              </svg>
+            </div>
+            <div
+              className={`accordion-content ${
+                openCard === tierData.tier ? 'open' : ''
+              }`}
+            >
+              <p>{tierData.description}</p>
+              <ul>
+                {tierData.features.map((feature, i) => (
+                  <li key={i}>
+                    <strong>{feature.feature}:</strong>{' '}
+                    {feature.available}
+                  </li>
+                ))}
+              </ul>
+              <div className="accordion-footer">
+                <Button
+                  onClick={() => onSelectTier(tierData.tier)}
+                  label="Choose"
+                  style={{
+                    backgroundColor:
+                      themeSettings.colors.buttonBackground,
+                    color: themeSettings.colors.buttonText,
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 

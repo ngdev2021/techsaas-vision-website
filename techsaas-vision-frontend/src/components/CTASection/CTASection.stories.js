@@ -1,0 +1,1 @@
+import React from 'react'; import CTASection from './CTASection'; export default { title: 'CTASection', component: CTASection }; export const Default = () => <CTASection />;

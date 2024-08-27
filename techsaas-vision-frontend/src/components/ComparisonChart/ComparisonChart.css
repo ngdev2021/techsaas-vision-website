@@ -1,9 +1,4 @@
-
-
-.comparison-chart:hover {
-  transform: scale(1.02);
-}
-
+/* Default table styles for larger screens */
 .comparison-chart {
   margin-top: 50px;
   margin-bottom: 5rem;
@@ -14,18 +9,15 @@
   transition: transform 0.3s ease-in-out;
 }
 
+/* Table header and cell styles */
 .comparison-chart h3 {
   color: var(--light-text-color);
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 20px;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
-
-/* Additional styles for table, th, td, etc. */
-
 
 .comparison-chart table {
   width: 100%;
@@ -37,12 +29,10 @@
 
 .comparison-chart th,
 .comparison-chart td {
-    color: var(--light-text-color); /* Adjust to light text for dark mode */
-
-  padding: 20px;
-  text-align: center;
+  padding: 15px 20px;
   font-size: 1.1rem;
   transition: background-color 0.3s ease;
+  text-align: center;
 }
 
 .comparison-chart th {
@@ -61,34 +51,88 @@
   background-color: var(--highlight-color);
 }
 
-.comparison-chart tr:hover td:first-child {
-  font-weight: bold;
-}
-
 .comparison-chart tr:nth-child(even) td {
   background-color: var(--alternate-row-color);
 }
 
-.comparison-chart td:first-child {
+/* Responsive styles - Accordion view on smaller screens */
+.comparison-accordion {
+  display: none;
+  margin-top: 30px;
+  margin-bottom: 5rem;
+  padding: 10px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-card {
+  background-color: var(--secondary-background-color);
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  padding: 15px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
   font-weight: bold;
-  color: var(--primary-text-color);
-  text-align: left;
-  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.comparison-chart th:first-child {
-  text-align: left;
-  padding-left: 20px;
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background-color: var(--secondary-background-color);
+  padding: 0 15px;
 }
 
+.accordion-content.open {
+  max-height: 500px;
+  padding: 15px;
+}
+
+.accordion-header svg {
+  transition: transform 0.3s ease;
+}
+
+.accordion-header svg.rotate {
+  transform: rotate(180deg);
+}
+
+.accordion-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.accordion-footer button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-footer button:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Hide table on smaller screens, show accordion */
 @media screen and (max-width: 768px) {
-  .comparison-chart th,
-  .comparison-chart td {
-    padding: 10px;
-    font-size: 0.9rem;
+  .comparison-chart {
+    display: none;
   }
 
-  .comparison-chart h3 {
-    font-size: 1.5rem;
+  .comparison-accordion {
+    display: block;
   }
 }

@@ -67,16 +67,16 @@ function App() {
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route
+            {/* <Route
               path="/mystery-box"
               element={
                 <MysteryBoxSection
                   onReveal={() => setShowModalState(true)}
                 />
               }
-            />
+            /> */}
             <Route path="/login" element={<Login />} />
-            <Route path="/playground" element={<TestComponent />} />
+            {/* <Route path="/playground" element={<TestComponent />} /> */}
             <Route path="/discover-how" element={<DiscoverHow />} />
             <Route
               path="/see-our-process"

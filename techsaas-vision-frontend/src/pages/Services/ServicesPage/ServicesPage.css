@@ -141,8 +141,9 @@
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   .service-cards {
-    /* flex-direction: column; */
+
     align-items: center; /* Center cards on mobile */
+    margin-bottom: 7rem;
   }
 
   .mid-tier-cta-banner h3 {

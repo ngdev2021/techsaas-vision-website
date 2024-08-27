@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useThemeSettings } from '../../../context/theme/ThemeSettingsContext/ThemeSettingsContext';
@@ -18,6 +18,7 @@ const ServicesPage = () => {
   const [selectedTier, setSelectedTier] = useState(
     getLastChosenTier()
   );
+  const servicesOverviewRef = useRef(null); // Create a ref for the services section
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -30,6 +31,11 @@ const ServicesPage = () => {
   const handleTierSelection = (tier) => {
     setSelectedTier(tier);
     saveLastChosenTier(tier);
+
+    // Scroll to the services section
+    servicesOverviewRef.current.scrollIntoView({
+      behavior: 'smooth',
+    });
   };
 
   return (
@@ -54,7 +60,10 @@ const ServicesPage = () => {
           themeSettings={themeSettings}
         />
       </div>
-      <div className="services-overview">
+      <div
+        ref={servicesOverviewRef} // Reference for the scroll
+        className="services-overview"
+      >
         <TierSection
           tier={filteredServicesData.tier}
           services={filteredServicesData.services}

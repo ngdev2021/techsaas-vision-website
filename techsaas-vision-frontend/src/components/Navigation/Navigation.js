@@ -69,6 +69,12 @@ const Navigation = ({ toggleModal, userName }) => {
             <span>Welcome, {userName ? userName : 'Guest'}!</span>
           </li>
           <li>
+            <li>
+              <Link to="/ad-creation-tool" onClick={handleLinkClick}>
+                Create Ad
+              </Link>
+            </li>
+
             <Link to="/services" onClick={handleLinkClick}>
               Services
             </Link>

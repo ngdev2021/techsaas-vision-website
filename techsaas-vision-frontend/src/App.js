@@ -22,6 +22,8 @@ import TestComponent from './Playground/TestComponent';
 import Login from './pages/Login/Login';
 import DiscoverHow from './pages/DiscoverHow/DiscoverHow';
 import SeeOurProcess from './pages/SeeOurProcess/SeeOurProcess';
+import AdCreationTool from './adCreationAndMarketing/AdCreationTool/AdCreationTool';
+import AdCarousel from './adCreationAndMarketing/AdCarousel/AdCarousel';
 
 function App() {
   const { theme, showModal } = useTheme();
@@ -82,6 +84,11 @@ function App() {
               path="/see-our-process"
               element={<SeeOurProcess />}
             />
+            <Route
+              path="/ad-creation-tool"
+              element={<AdCreationTool />}
+            />
+            <Route path="/ad-carousel" element={<AdCarousel />} />
           </Routes>
         </div>
         <FooterCTA

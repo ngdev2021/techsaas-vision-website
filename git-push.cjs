@@ -3,6 +3,9 @@ const { execSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
+// Check if the user wants to perform a dry run
+const isDryRun = process.argv.includes('--dry-run');
+
 try {
   const getChanges = () =>
     execSync('git status --porcelain').toString().trim();
@@ -68,48 +71,97 @@ try {
       commitMessage += ` - ${additionalDetails}`;
     }
 
+    // Detect the type of changes and suggest branch types
+    let branchType = 'feature';
     if (changedFiles.some((file) => file.includes('bugfix/'))) {
+      branchType = 'bugfix';
       commitMessage += ' #bugfix';
     } else if (
       changedFiles.some((file) => file.includes('feature/'))
     ) {
+      branchType = 'feature';
       commitMessage += ' #feature';
     } else if (
       changedFiles.some((file) => file.includes('refactor/'))
     ) {
+      branchType = 'refactor';
       commitMessage += ' #refactor';
     }
 
-    fs.appendFileSync(
-      'commit-log.txt',
-      `${new Date()}: ${commitMessage}\n`
-    );
+    // Confirm branch selection and create/switch branches if needed
+    const branch = execSync('git branch --show-current')
+      .toString()
+      .trim();
 
-    execSync('git add .');
-    execSync(`git commit -m "${commitMessage}"`);
-    console.log('Changes committed successfully.');
+    if (!branch.startsWith(branchType)) {
+      const createBranch = readlineSync.question(
+        `You're on branch ${branch}. Do you want to switch or create a ${branchType} branch? (y/n): `
+      );
+
+      if (createBranch.toLowerCase() === 'y') {
+        const newBranchName = readlineSync.question(
+          `Enter the ${branchType} branch name: `
+        );
+        if (isDryRun) {
+          console.log(
+            `Dry run: Would switch to branch ${branchType}/${newBranchName}`
+          );
+        } else {
+          execSync(`git checkout -b ${branchType}/${newBranchName}`, {
+            stdio: 'inherit',
+          });
+          console.log(
+            `Switched to branch ${branchType}/${newBranchName}`
+          );
+        }
+      }
+    }
+
+    // Save commit log
+    if (!isDryRun) {
+      fs.appendFileSync(
+        'commit-log.txt',
+        `${new Date()}: ${commitMessage}\n`
+      );
+    } else {
+      console.log(
+        `Dry run: Would append commit message to commit-log.txt`
+      );
+    }
+
+    if (!isDryRun) {
+      execSync('git add .');
+      execSync(`git commit -m "${commitMessage}"`);
+      console.log('Changes committed successfully.');
+    } else {
+      console.log(
+        `Dry run: Would commit changes with message "${commitMessage}"`
+      );
+    }
 
     let newChanges = getChanges();
     if (newChanges) {
       console.log(
         'New uncommitted changes detected, committing again...'
       );
-      execSync('git add .');
-      execSync(
-        'git commit -m "Additional changes detected and committed."'
-      );
+      if (!isDryRun) {
+        execSync('git add .');
+        execSync(
+          'git commit -m "Additional changes detected and committed."'
+        );
+      } else {
+        console.log(
+          'Dry run: Would commit additional detected changes.'
+        );
+      }
     }
 
-    const branch = execSync('git branch --show-current')
-      .toString()
-      .trim();
-    if (!['main', 'develop'].includes(branch)) {
-      console.log(`Switching to main or develop branch...`);
-      execSync('git checkout main', { stdio: 'inherit' });
+    if (!isDryRun) {
+      execSync(`git push origin ${branch}`, { stdio: 'inherit' });
+      console.log(`Pushed changes to ${branch} branch successfully.`);
+    } else {
+      console.log(`Dry run: Would push changes to ${branch} branch`);
     }
-
-    execSync(`git push origin ${branch}`, { stdio: 'inherit' });
-    console.log(`Pushed changes to ${branch} branch successfully.`);
 
     if (
       ['src', 'config'].some((dir) => parentDirectories.includes(dir))
@@ -118,8 +170,12 @@ try {
         'Changes detected in critical directories. Do you want to deploy? (y/n): '
       );
       if (deploy.toLowerCase() === 'y') {
-        execSync('npm run deploy', { stdio: 'inherit' });
-        console.log('Deployment completed.');
+        if (!isDryRun) {
+          execSync('npm run deploy', { stdio: 'inherit' });
+          console.log('Deployment completed.');
+        } else {
+          console.log('Dry run: Would run deployment');
+        }
       } else {
         console.log('Skipping deployment.');
       }

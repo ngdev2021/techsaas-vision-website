@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4 # Updated to the latest version
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4 # Updated to the latest version
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
 
@@ -24,9 +24,11 @@ jobs:
       - name: Build frontend
         run: CI=false npm run build --prefix techsaas-vision-frontend
 
+      - name: Copy CNAME to build directory
+        run: cp CNAME techsaas-vision-frontend/build/CNAME
+
       - name: List build files
         run: ls -al techsaas-vision-frontend/build
-
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

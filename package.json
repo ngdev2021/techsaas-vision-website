@@ -214,7 +214,7 @@
     "build": "npm run build --prefix techsaas-vision-frontend",
     "deploy": "npm run deploy --prefix techsaas-vision-frontend",
     "scripts": {
-      "git-push": "node git-push.js"
+      "git-push": "node git-push.cjs"
     }
   },
   "author": "Reginald Brown <ngdev21@gmail.com> (https://www.reginaldbrowninc.com/)",

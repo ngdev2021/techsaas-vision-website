@@ -1,0 +1,133 @@
+/* AdCarousel.css */
+
+/* Container for the carousel */
+.ad-carousel-container {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 100%;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  color: #333;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Heading styles */
+.ad-carousel-container h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #191654;
+  font-weight: bold;
+}
+
+/* Carousel styling */
+.ad-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+/* Inner carousel structure */
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Individual ad items */
+.ad-item {
+  flex: 0 0 100%;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Heading within each ad item */
+.ad-item h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Image styling within each ad item */
+.ad-item img {
+  margin-top: 10px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Navigation controls */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 1.5em;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+.carousel-control:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Indicators at the bottom */
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bbb;
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  background-color: #191654;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .ad-carousel-container {
+    padding: 10px;
+  }
+
+  .ad-carousel-container h2 {
+    font-size: 1.2em;
+  }
+
+  .ad-item {
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  .carousel-control {
+    font-size: 1.2em;
+    padding: 8px;
+  }
+}

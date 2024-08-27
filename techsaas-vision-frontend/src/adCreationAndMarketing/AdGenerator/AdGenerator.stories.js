@@ -1,0 +1,1 @@
+import React from 'react'; import AdGenerator from './AdGenerator'; export default { title: 'AdGenerator', component: AdGenerator }; export const Default = () => <AdGenerator />;

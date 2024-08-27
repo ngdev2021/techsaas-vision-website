@@ -2,16 +2,103 @@
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  margin-bottom: 7rem;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f0f4f7, #c3d3e7);
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: var(--accent-color);
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--accent-hover-color);
+}
+
+.skills-progress {
+  margin-bottom: 60px;
+}
+
+.skills-progress h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.progress-bar {
+  background-color: var(--secondary-background-color);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar span {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.progress {
+  height: 8px;
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.testimonials-carousel-section {
+  background: linear-gradient(135deg, #f7f1e6, #e0c4a5);
+  padding: 60px 20px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.featured-projects-section,
+.skills-showcase-section,
+.api-widgets-section,
+.calculator-widget-section,
+.contact-banner-section {
+  padding: 60px 0;
+  background-color: var(--secondary-background-color);
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .section-title {
   font-size: 2.5rem;
-  color: let(--accent-color);
   text-align: center;
   margin-bottom: 30px;
+  color: var(--accent-color);
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 .section-title::after {
@@ -19,45 +106,28 @@
   display: block;
   width: 60px;
   height: 3px;
-  background-color: let(--accent-color);
+  background-color: var(--accent-color);
   margin: 10px auto 0;
   border-radius: 5px;
-}
-
-.section-title,
-h2 {
-  font-size: 2.2rem;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: let(--text-color);
-  position: relative;
-}
-
-.featured-projects-section,
-.skills-showcase-section,
-.api-widgets-section,
-.real-estate-finder-section,
-.calculator-widget-section,
-.nearby-finder-section,
-.crypto-prices-section,
-.contact-banner-section {
-  padding: 60px 0;
-  background-color: let(--secondary-background-color);
-  border-radius: 15px;
-  margin-bottom: 40px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.section-title {
-  color: let(--accent-color);
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-align: center;
 }
 
 @media (max-width: 768px) {
   .portfolio-page {
     padding: 10px;
+    margin-bottom: 7rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
   }
 
   .section-title {
@@ -67,10 +137,7 @@ h2 {
   .featured-projects-section,
   .skills-showcase-section,
   .api-widgets-section,
-  .real-estate-finder-section,
   .calculator-widget-section,
-  .nearby-finder-section,
-  .crypto-prices-section,
   .contact-banner-section {
     padding: 30px 0;
   }

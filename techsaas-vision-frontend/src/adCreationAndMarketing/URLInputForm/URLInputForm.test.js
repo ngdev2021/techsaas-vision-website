@@ -1,0 +1,1 @@
+import React from 'react'; import { render } from '@testing-library/react'; import URLInputForm from './URLInputForm'; test('renders URLInputForm', () => { render(<URLInputForm />); });

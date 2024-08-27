@@ -1,0 +1,28 @@
+/* Styles for TestimonialCard.css */.testimonial-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-text {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.testimonial-author {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #555;
+  text-align: right;
+}

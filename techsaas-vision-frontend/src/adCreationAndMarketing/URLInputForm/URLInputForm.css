@@ -1,0 +1,38 @@
+.url-input-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.url-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  transition: border-color 0.3s;
+}
+
+.url-input:focus {
+  border-color: #43C6AC;
+  outline: none;
+}
+
+.generate-ad-button {
+  padding: 15px 25px;
+  font-size: 1.1em;
+  background: linear-gradient(135deg, #FF7E5F, #FEB47B);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.generate-ad-button:hover {
+  transform: translateY(-2px);
+}
